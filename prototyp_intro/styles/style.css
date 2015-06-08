@@ -176,6 +176,9 @@ transition:all ease 0.5s;
 		transition:all 2s;
 
 		border-radius: 2px;
+		
+		opacity: 0.9;
+		
 
 
 }
@@ -192,6 +195,10 @@ transition:all ease 0.5s;
 		transition:all 0.5s;
 
 
+
+
+
+
 			
 
 
@@ -201,9 +208,10 @@ transition:all ease 0.5s;
 .fav1{
 
 	background-color: #f2fffb;
-	border: 1px solid rgba(0,0,0,0.1);
-	border-right: none;
+	opacity:0.8;
 
+	border-right: 1px solid rgba(0,0,0,0.5);
+	
 
 
 }
@@ -211,8 +219,9 @@ transition:all ease 0.5s;
 .fav2{
 
 	background-color: #f2fffb;
-	border: 1px solid rgba(0,0,0,0.1);
-	border-right: none;
+	opacity:0.8;
+
+	
 
 
 }
@@ -220,8 +229,9 @@ transition:all ease 0.5s;
 .fav3{
 
 	background-color: #f2fffb;
-	border: 1px solid rgba(0,0,0,0.1);
+	opacity:0.8;
 	
+	border-left: 1px solid rgba(0,0,0,0.5);
 
 
 }
