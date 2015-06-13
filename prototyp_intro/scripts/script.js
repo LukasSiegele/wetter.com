@@ -63,21 +63,18 @@ $(".profilpic").click( function(){
 $(window).load( function(){
 
 		setTimeout(function(){
-  		$(".tipp").addClass("showup");
+  		$(".container_tipps").addClass("showup");
 	}	, 2000);
 
 
 		setTimeout(function(){
-  		$(".tipp").removeClass("showup");
-	}	, 5000);
+  		$(".container_tipps").removeClass("showup");
+	}	, 8000);
 
 
 
 });
 
 
-$(document).on( 'scroll', '.container_vohersage', function(){
-    alert("HIlfe");
-});
 
 });
