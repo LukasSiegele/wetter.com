@@ -76,5 +76,48 @@ $(window).load( function(){
 });
 
 
+var wi = $(window).width();
+
+
+$(window).resize(function(){
+
+	var wi = $(window).width();
+
+	if(wi <= 1000){
+
+		$(".karte7").addClass("remove_1000");
+		$(".karten").addClass("active_1000");
+
+
+	}
+	if(wi <= 900){
+
+		$(".karte6").addClass("remove_1000");
+		$(".karten").addClass("active_900");
+
+
+	}
+
+	if(wi <= 700){
+
+		$(".karte5").addClass("remove_1000");
+		$(".karten").addClass("active_800");
+
+
+	}
+
+	if(wi <= 550){
+
+		$(".karte4").addClass("remove_1000");
+		$(".karten").addClass("active_700");
+
+
+	}
+
+
+
+});
+
+
 
 });

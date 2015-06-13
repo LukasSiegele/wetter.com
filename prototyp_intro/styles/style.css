@@ -8,7 +8,7 @@ body	{
 	font-family: Helvetica, Arial, sans-serif;
 	color: #000000;
 	font-weight: 400;
-	font-size: 18px;
+	font-size: 20px;
 
 	line-height: 1.2em;
 	cursor: default;
@@ -25,6 +25,12 @@ body	{
 	
 }
 
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+}
 
 .profilpic{
 
@@ -466,7 +472,7 @@ bottom:0px;
 .container_vohersage{
 
 
-	width:calc(100% + 2000px);
+	width:calc(100% + 100px);
 
 	position: absolute;
 
@@ -485,7 +491,7 @@ bottom:0px;
 
 .karten{
 
-	width:160px;
+	width:14%;
 	height:550px;
 
 	background-color: #f2fffb;
@@ -497,7 +503,7 @@ bottom:0px;
 
 	opacity:0.65;
 
-	transition: all 1.5s ease;
+	transition: all 0.3s ease;
 
 
 
@@ -519,3 +525,43 @@ bottom:0px;
 
 
 }
+
+.remove_1000{
+
+
+display:none;
+
+
+}
+
+.active_1000{
+
+width:16%;
+
+
+}
+
+.active_900{
+
+
+width:19%;
+
+
+}
+
+.active_800{
+
+
+width:25%;
+
+
+}
+
+.active_700{
+
+
+width:30%;
+
+}
+
+
