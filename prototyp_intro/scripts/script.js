@@ -79,10 +79,12 @@ $(window).load( function(){
 var wi = $(window).width();
 
 
+
 $(window).resize(function(){
 
 	var wi = $(window).width();
 
+	//REMOVE
 	if(wi <= 1000){
 
 		$(".karte7").addClass("remove_1000");
@@ -94,6 +96,7 @@ $(window).resize(function(){
 
 		$(".karte6").addClass("remove_1000");
 		$(".karten").addClass("active_900");
+		
 
 
 	}
@@ -110,6 +113,39 @@ $(window).resize(function(){
 
 		$(".karte4").addClass("remove_1000");
 		$(".karten").addClass("active_700");
+
+
+	}
+
+	//ADD
+	if(wi >= 1000){
+
+		$(".karte7").removeClass("remove_1000");
+		$(".karten").removeClass("active_1000");
+
+
+	}
+	if(wi >= 900){
+
+		$(".karte6").removeClass("remove_1000");
+		$(".karten").removeClass("active_900");
+
+
+
+	}
+
+	if(wi >= 700){
+
+		$(".karte5").removeClass("remove_1000");
+		$(".karten").removeClass("active_800");
+
+
+	}
+
+	if(wi >= 550){
+
+		$(".karte4").removeClass("remove_1000");
+		$(".karten").removeClass("active_700");
 
 
 	}
