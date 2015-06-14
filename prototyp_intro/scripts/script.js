@@ -1,6 +1,11 @@
 $(document).ready(function()	{
-	
-	// Hier steht unser Code
+
+// Hier steht unser Code
+
+//window breite speichern
+var wi = $(window).width();  
+console.log(wi);
+
 
 
 $(".suche").click( function(){
