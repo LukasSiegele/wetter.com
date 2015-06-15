@@ -645,7 +645,86 @@ h5{
 }
 
 
+.baric{
 
+		width:20px;
+		height:20px;
+
+		border-radius: 20px;
+		border:1px solid #fff;
+
+		float:left;
+
+		margin: 5px;
+
+		color:#fff;
+
+		font-size:7pt;
+
+		text-align: center;
+
+		vertical-align: middle;
+
+		transition: all 0.6s ease;
+
+		
+
+
+
+}
+
+
+
+.container_baric{
+
+		position: absolute;
+		left:8%;
+
+		
+
+
+
+}
+
+.container_teilung{
+
+		position: absolute;
+		right:8%;
+
+		
+
+
+
+}
+
+.loc{
+
+background-color: #fff;
+
+}
+
+.play{
+
+position: absolute;
+left:calc(50% + 10px);
+bottom:3px;
+
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 10px 0 10px 17.3px;
+border-color: transparent transparent transparent #ffffff;
+border-radius: 2px;
+
+}
+
+.menu_bar{
+
+	
+	
+
+
+}
 
 
 
