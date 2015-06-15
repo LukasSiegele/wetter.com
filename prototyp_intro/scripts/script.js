@@ -63,6 +63,8 @@ $(".profilpic").click( function(){
 
 
 
+
+
 	});
 
 $(window).load( function(){
@@ -101,7 +103,7 @@ $(window).resize(function(){
 
 		$(".karte6").addClass("remove_1000");
 		$(".karten").addClass("active_900");
-		
+
 
 
 	}
@@ -158,6 +160,16 @@ $(window).resize(function(){
 
 
 });
+
+$(".pollen").hover( function(){
+
+		
+
+		$(this).toggleClass("menu_bar");
+
+
+
+	});
 
 
 
