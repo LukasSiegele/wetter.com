@@ -621,13 +621,15 @@ h4{
 }
 
 h5{
-	position: absolute;
-	margin-top: -.3%;
-	margin-left: 6%;
+	position: relative;
+	font-weight: 400;
+	margin-top: -3%;
+	margin-left: 60%;
 }
 
 .vorhersage_detail{
-	margin-top: 40%;
+	position: relative;
+	margin-top: 30%;
 	font-weight: 200;
 	font-size: 1.5rem;
 	margin-left: auto;
