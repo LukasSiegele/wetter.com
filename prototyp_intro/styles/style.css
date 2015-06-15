@@ -641,6 +641,16 @@ h5{
 	margin-left: auto;
 }
 
+.fav_icon{
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+
+/*suche*/
+.ui-autocomplete-input:focus {color:green;
+	border:2px outset green;
+}
 
 
 
