@@ -6,13 +6,14 @@ $(document).ready(function()	{
 var wi = $(window).width();  
 console.log(wi);
 
-
+$(".loc").addClass("active_tag1");
 
 $(".suche").click( function(){
 
 		$(this).toggleClass("active_suche");
 		$(".container_diagramm").toggleClass("active_dia");
 		$(".container_vohersage").toggleClass("active_vohersage");
+		$(".scroll_container").toggleClass("display_true");
 
 
 	});
@@ -45,15 +46,13 @@ $(".background").click( function(){
 
 	});
 
-$(".container_vohersage").click( function(){
+/*$(".container_vohersage").click( function(){
 
-		$(this).toggleClass("click_v");
-
-		$(".background").toggleClass("fadeout");
+		
 
 
 
-	});
+	});*/
 
 $(".profilpic").click( function(){
 
@@ -155,6 +154,95 @@ $(window).resize(function(){
 
 	}
 
+
+
+});
+
+
+$(".scroll_container").scroll(function(){
+
+		$(".container_vohersage").addClass("click_v");
+
+		$(".background").addClass("fadeout");
+
+		
+
+
+
+
+
+
+});
+
+
+
+$(".scroll_container").scroll(function(){
+    var scrollPos = $(".scroll_container").scrollTop();
+    console.log(scrollPos);
+
+
+
+    if(scrollPos == 0){
+
+    	$(".container_vohersage").removeClass("click_v");
+
+		$(".background").removeClass("fadeout");
+
+		$(".loc").addClass("active_tag1");
+		$(".1").removeClass("active_tag1");
+
+    }
+
+    if(scrollPos >= 800 ){
+
+    	
+
+   		$(".1").removeClass("active_tag1");
+    	$(".3").addClass("active_tag1");
+		$(".karten").addClass("drei_tage");
+		$(".16").removeClass("active_tag1");
+
+
+
+    }
+
+    if(scrollPos <= 800 && scrollPos >= 3){
+
+    	$(".3").removeClass("active_tag1");
+    	$(".1").addClass("active_tag1");
+    	$(".loc").removeClass("active_tag1");
+		$(".karten").removeClass("drei_tage");
+
+    }
+
+       if(scrollPos >= 1200){
+       	$(".3").removeClass("active_tag1");
+       	$(".16").addClass("active_tag1");
+    	
+
+   		
+    	
+    	
+
+		$(".karten").addClass("sechszehn_tage");
+
+
+		$(".container_vohersage").scroll(function(){
+    var scrollPos = $(".container_vohersage").scrollLeft();
+    console.log(scrollPos);
+		});
+
+
+
+    }
+
+    if(scrollPos <= 1200){
+
+    	
+
+		$(".karten").removeClass("sechszehn_tage");
+
+    }
 
 
 });
