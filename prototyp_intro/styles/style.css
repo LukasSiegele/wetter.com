@@ -18,6 +18,8 @@ body	{
 	-ms-font-feature-settings: 'tnum';
 	font-feature-settings: 'tnum';
 
+	overflow-x:hidden;
+
 
 	
 
@@ -32,6 +34,14 @@ body	{
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
+}
+
+
+.inhalt_karte{
+
+
+
+
 }
 
 .profilpic{
@@ -56,26 +66,130 @@ body	{
 }
 .profileinst{
 
-		width:250px;
-		height:40px;
+		width:300px;
+		height:300px;
 
 		
 
-		background-color:#fff;
+		background-color:#fafafa;
 
 		position: absolute;
 
 		right:60px;
-		top:0px;
+		top:-300px;
 
 		z-index: 8;
 
 		transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-		opacity:0.9;
+		
+
+		font-size: 9pt;
+
+		float:left;
+
+
 	
 
 
+}
+
+
+.tipp1_profil{
+
+height:50px;
+width:100%;
+
+font-size: 7pt;
+
+position: absolute;
+top:40px;
+
+background-color: #fff;
+
+
+
+
+}
+
+.logo1_profil{
+	
+		width:50px;
+		height:50px;
+
+		background-color: #5c7cfc;
+
+		float:left;
+
+		
+
+		
+
+}
+
+
+.bars_bez{
+
+position: absolute;
+top:100px;
+left:10px;
+float: left;
+
+width: 100%;
+
+
+}
+
+.bars{
+
+position: absolute;
+top:105px;
+left:130px;
+float: left;
+
+width: 100%;
+
+
+}
+
+.bar_back{
+
+	float:left;
+
+	background-color: #e8e8e8;
+	width:100px;
+	height:10px;
+
+	border-radius: 3px;
+
+
+
+}
+
+.inner{
+
+	width:30%;
+
+	background-color: #fce544;
+}
+
+.inner2{
+
+	width:70%;
+
+	background-color: #79bbf2;
+}
+.inner3{
+
+	width:80%;
+
+	background-color: #79bbf2;
+}
+.inner4{
+
+	width:90%;
+
+	background-color: #79bbf2;
 }
 
 .container_tipps{
@@ -209,7 +323,7 @@ margin-right:380px;
 .active_profil{
 
 
-	height:300px;
+	top:0px;
 
 
 }
@@ -312,6 +426,7 @@ z-index: 9;
 
 
 
+
 			
 
 
@@ -324,6 +439,10 @@ z-index: 9;
 	opacity:0.8;
 
 	border-right: 1px solid rgba(0,0,0,0.5);
+
+	float:left;
+
+	font-size: 8pt;
 	
 
 
@@ -519,7 +638,7 @@ bottom:0px;
 
 	transition:all 600ms cubic-bezier(0.86, 0, 0.07, 1) ;
 
-	
+	padding:10px;
 
 
 
