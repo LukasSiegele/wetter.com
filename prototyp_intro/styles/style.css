@@ -66,6 +66,8 @@ body	{
 }
 
 
+
+
 .Name{
 
 		font-size: 10pt;
@@ -230,11 +232,37 @@ width: 100%;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 	border-top: 1px solid rgba(0,0,0,0.1);
 
-	text-align:right;
-	vertical-align: middle;
+
+
+	
 
 
 
+
+}
+
+.platzhalter{
+
+	width: 15px;
+	height: 15px;
+
+	border-radius: 50%;
+
+	background-color: #000;
+
+	float:left;
+
+	position: absolute;
+	left:2%;
+
+
+}
+
+.text{
+
+	position: absolute;
+	right:2%;
+	
 }
 
 .konto_klein{
@@ -274,6 +302,28 @@ width: 100%;
 		position: absolute;
 		left: 75px;
 
+
+}
+
+
+.einstel_konto{
+
+height:400px;
+
+
+}
+
+.einstel_trenn{
+
+
+
+
+}
+
+
+.guide_off{
+
+display:none;
 
 }
 

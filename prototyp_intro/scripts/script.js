@@ -60,6 +60,11 @@ $(".profilpic").click( function(){
 
 		$(".profileinst").toggleClass("active_profil");
 
+		$(".trennleiste").removeClass("einstel_trenn");
+
+		$(".profileinst").removeClass("einstel_konto");
+		$(".guide").removeClass("guide_off");
+
 
 
 	});
@@ -164,14 +169,16 @@ $(".scroll_container").scroll(function(){
 		$(".container_vohersage").addClass("click_v");
 
 		$(".background").addClass("fadeout");
-
-		
-
+});
 
 
 
+$(".platzhalter").click(function(){
 
+		$(".trennleiste").toggleClass("einstel_trenn");
 
+		$(".profileinst").toggleClass("einstel_konto");
+		$(".guide").toggleClass("guide_off");
 });
 
 
