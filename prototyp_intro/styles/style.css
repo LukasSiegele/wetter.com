@@ -358,7 +358,7 @@ text-align: center;
 .active_karte{
 
 -webkit-filter: blur(0px); 
-
+z-index: 9;
 
 }
 
@@ -939,6 +939,11 @@ border-radius: 2px;
 
 
 }
+
+map{
+	z-index: 8;
+}
+
 
 
 
