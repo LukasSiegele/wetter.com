@@ -227,10 +227,8 @@ $(".scroll_container").scroll(function(){
 		$(".karten").addClass("sechszehn_tage");
 
 
-		$(".container_vohersage").scroll(function(){
-    var scrollPos = $(".container_vohersage").scrollLeft();
-    console.log(scrollPos);
-		});
+		
+	
 
 
 
