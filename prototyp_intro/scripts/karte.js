@@ -115,6 +115,14 @@ function initialize() {
 
   var mapOptions = {
     zoom: 6,
+    maxZoom: 9,
+    minZoom: 6,
+    disableDefaultUI: true,
+    zoomControl: true,
+    zoomControlOptions: {
+        style: google.maps.ZoomControlStyle.LARGE,
+        position: google.maps.ControlPosition.LEFT_CENTER
+    },
     scaleControl: false,
     scrollwheel: false,
     disableDoubleClickZoom: true,
@@ -125,12 +133,14 @@ function initialize() {
     mapTypeId: MY_MAPTYPE_ID
   };
 
+
   var map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 
   var styledMapOptions = {
     name: 'Custom Style'
   };
+
 
   var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
 
@@ -147,6 +157,38 @@ function initialize() {
   // The custom USGSOverlay object contains the USGS image,
   // the bounds of the image, and a reference to the map.
   overlay = new USGSOverlay(bounds, srcImage, map);
+
+
+
+  // Grenze für Europa
+   var strictBounds = new google.maps.LatLngBounds(
+     new google.maps.LatLng(44.570904, -12.678223), 
+     new google.maps.LatLng(56.953962, 33.596191)
+   );
+
+   // dragend event
+   google.maps.event.addListener(map, 'dragend', function() {
+     if (strictBounds.contains(map.getCenter())) return;
+
+     // Zurück in das PNG
+
+     var c = map.getCenter(),
+         x = c.lng(),
+         y = c.lat(),
+         maxX = strictBounds.getNorthEast().lng(),
+         maxY = strictBounds.getNorthEast().lat(),
+         minX = strictBounds.getSouthWest().lng(),
+         minY = strictBounds.getSouthWest().lat();
+
+     if (x < minX) x = minX;
+     if (x > maxX) x = maxX;
+     if (y < minY) y = minY;
+     if (y > maxY) y = maxY;
+
+     map.setCenter(new google.maps.LatLng(y, x));
+   });
+
+
 }
 
 /** @constructor */
@@ -219,6 +261,10 @@ USGSOverlay.prototype.onRemove = function() {
   this.div_.parentNode.removeChild(this.div_);
   this.div_ = null;
 };
+
+
+
+
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
