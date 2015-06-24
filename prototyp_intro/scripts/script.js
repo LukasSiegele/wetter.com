@@ -8,13 +8,17 @@ console.log(wi);
 
 $(".loc").addClass("active_tag1");
 
-$(".suche").click( function(){
 
-		$(this).toggleClass("active_suche");
+
+$(".suche").keypress( function(e){
+	if(e.which == 13) {
+
+      event.preventDefault();
+   		$(this).toggleClass("active_suche");
 		$(".container_diagramm").toggleClass("active_dia");
 		$(".container_vohersage").toggleClass("active_vohersage");
 		$(".scroll_container").toggleClass("display_true");
-
+	}
 
 	});
 
@@ -27,14 +31,22 @@ $(".suche").hover( function(){
 	});
 
 
-$(".container_suche").click( function(){
+$(".container_suche").keypress( function(e){
+
+
+		if(e.which == 13) {
+		
+      event.preventDefault();
 
 		$(this).toggleClass("active");
 		$(".favo").toggleClass("active_fav");
 
 
-
+	}
 	});
+
+
+
 
 $(".background").click( function(){
 
@@ -163,16 +175,6 @@ $(window).resize(function(){
 
 });
 
-
-$(".scroll_container").scroll(function(){
-
-		$(".container_vohersage").addClass("click_v");
-
-		$(".background").addClass("fadeout");
-});
-
-
-
 $(".platzhalter").click(function(){
 
 		$(".trennleiste").toggleClass("einstel_trenn");
@@ -182,16 +184,51 @@ $(".platzhalter").click(function(){
 });
 
 
+$(".scroll_container").scroll(function(){
+
+		$(".container_vohersage").addClass("click_v");
+		$(".diagramm").addClass("click_v");
+
+		$(".background").addClass("fadeout");
+});
+
+
+   
+    $(".scroll_container").on('scroll', { previousTop: 0 }, 
+    function () {
+    var currentTop = $(".scroll_container").scrollTop();
+    if (currentTop < this.previousTop && currentTop > 50) {
+       
+	console.log("hoch");
+
+    }
+
+
+	else{
+
+		console.log("runter");
+
+
+
+       // Scroll down
+    } 
+	this.previousTop = currentTop;
+	});
+
+
+
+
+
 
 $(".scroll_container").scroll(function(){
     var scrollPos = $(".scroll_container").scrollTop();
-    console.log(scrollPos);
+    
+    //console.log(scrollPos);
 
-
-
-    if(scrollPos == 0){
+    if(scrollPos <= 10){
 
     	$(".container_vohersage").removeClass("click_v");
+    	$(".diagramm").removeClass("click_v");
 
 		$(".background").removeClass("fadeout");
 
@@ -199,6 +236,18 @@ $(".scroll_container").scroll(function(){
 		$(".1").removeClass("active_tag1");
 
     }
+
+   
+ 
+
+/*
+   
+
+   
+
+
+
+	 
 
     if(scrollPos >= 800 ){
 
@@ -249,8 +298,9 @@ $(".scroll_container").scroll(function(){
 
     }
 
-
+*/
 });
+
 
 
 
