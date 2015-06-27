@@ -1100,6 +1100,17 @@ background-color: #fff;
 }
 
 
+/*GIF Overlays Karte*/
+.niederschlagTest{
+	position: fixed;
+	width: 400px;
+	height: 225px;
+	top: 300px;
+	left: 100px;
+	z-index: 10;
+}
+
+
 
 
 
