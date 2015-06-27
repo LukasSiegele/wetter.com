@@ -24,7 +24,6 @@
 				
 		<!-------------------------<!--! SCRIPTS ------------------------------>
 		<script type="text/javascript" src="scripts/script.js"></script>
-	    <script type="text/javascript" src="scripts/karte.js"></script>
 	
 		    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset-fonts/reset-fonts.css">
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/base/base-min.css">
@@ -62,68 +61,6 @@
 	
 	<body>
 
-	    <script>
-        $(function(){
-            var sampleTags = ['schwäbisch gmünd', 'morgen', 'freitag', 'nächste woche', 'regen', 'wolken', 'wind', 'berlin'];
-
-        
-
-            //-------------------------------
-            // Tag events
-            //-------------------------------
-            var eventTags = $('#eventTags');
-
-            var addEvent = function(text) {
-                $('#events_container').append(text + '<br>');
-            };
-
-            eventTags.tagit({
-                availableTags: sampleTags,
-                beforeTagAdded: function(evt, ui) {
-                    if (!ui.duringInitialization) {
-                        addEvent('beforeTagAdded: ' + eventTags.tagit('tagLabel', ui.tag));
-                    }
-                },
-                afterTagAdded: function(evt, ui) {
-                    if (!ui.duringInitialization) {
-                        addEvent('afterTagAdded: ' + eventTags.tagit('tagLabel', ui.tag));
-                    }
-                },
-                beforeTagRemoved: function(evt, ui) {
-                    addEvent('beforeTagRemoved: ' + eventTags.tagit('tagLabel', ui.tag));
-                },
-                afterTagRemoved: function(evt, ui) {
-                    addEvent('afterTagRemoved: ' + eventTags.tagit('tagLabel', ui.tag));
-                },
-                onTagClicked: function(evt, ui) {
-                    addEvent('onTagClicked: ' + eventTags.tagit('tagLabel', ui.tag));
-                },
-                onTagExists: function(evt, ui) {
-                    addEvent('onTagExists: ' + eventTags.tagit('tagLabel', ui.existingTag));
-                }
-            });
-
-
-            //-------------------------------
-            // Allow spaces without quotes.
-            //-------------------------------
-            $('#allowSpacesTags').tagit({
-                availableTags: sampleTags,
-                allowSpaces: true
-            });
-
-           
-            //-------------------------------
-            // Remove confirmation
-            //-------------------------------
-            $('#removeConfirmationTags').tagit({
-                availableTags: sampleTags,
-                removeConfirmation: true
-            });
-            
-        });
-    </script>
-
 		<div id="map-canvas"></div>
 
 
@@ -140,7 +77,7 @@
 		<img class="background" src="imgs/temperatur.png" width="100%"  height="100%">
 		
 		-->
-		<!--<img src="imgs/logo.svg">-->
+		<!--<img src="imgs/logo.svg">
 
 
 		
