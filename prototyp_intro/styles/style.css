@@ -59,10 +59,10 @@ body	{
 		top:4px;
 
 		z-index: 9;
+}
 
-	
-
-
+.profilpic:hover{
+	cursor:pointer;
 }
 
 
@@ -525,8 +525,6 @@ z-index: 9;
 
 .suche{
 
-
-
 		width:420px;
 		height:40px;
 
@@ -539,10 +537,11 @@ z-index: 9;
 		
 		opacity: 0.9;
 
+}
 
-		
-
-
+.suche:hover{
+		background-color: #e6e6e6;
+		cursor: pointer;
 }
 
 .favo{
@@ -752,7 +751,7 @@ bottom:0px;
 	bottom:-550px;
 	left:0px;
 
-
+	opacity: 0.65;
 	
 
 	transition: all 0.6s ease;
@@ -765,18 +764,14 @@ bottom:0px;
 
 
 .karten{
-
 	width:9%;
 	height:550px;
 
 	background-color: #fff;
-	
 
 	border-right: 1px solid rgba(0,0,0,0.1);
 
 	float:left;
-
-	opacity:0.65;
 
 	transition:all 600ms cubic-bezier(0.86, 0, 0.07, 1) ;
 
@@ -804,14 +799,13 @@ width:12%;
 .sechszehn_tage{
 
 
-width:6%;
+width:6.5%;
 
 
 }
 
 
 .active_vohersage{
-
 
 	bottom:-550px;
 
@@ -917,8 +911,8 @@ h4{
 
 h5{
 	position: absolute;
-	margin-top: -.3%;
-	margin-left: 6%;
+	margin-top: -.2%;
+	margin-left: 3%;
 }
 
 .vorhersage_detail{
@@ -933,11 +927,6 @@ h5{
 	margin-top: 10px;
 }
 
-
-/*suche*/
-.ui-autocomplete-input:focus {color:green;
-	border:2px outset green;
-}
 
 
 .baric{
