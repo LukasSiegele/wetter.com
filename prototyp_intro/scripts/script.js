@@ -307,7 +307,7 @@ $(".scroll_container").scroll(function(){
 
 
 			$(".1").removeClass("active_tag1");
-    		$(".3").addClass("active_tag1");
+               $(".3").addClass("active_tag1");
 			$(".karten").addClass("drei_tage");
 			$(".16").removeClass("active_tag1");
 			
