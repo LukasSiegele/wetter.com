@@ -78,7 +78,7 @@
             singleFieldNode: null,
 
             // Whether to animate tag removals or not.
-            animate: true,
+            animate: false,
 
             // Optionally set a tabindex attribute on the input that gets
             // created for tag-it.
@@ -242,7 +242,7 @@
                     // in which case it isn't caught.
                     if (
                         (event.which === $.ui.keyCode.COMMA && event.shiftKey === false) ||
-                        event.which === $.ui.keyCode.ENTER ||
+                       
                         (
                             event.which == $.ui.keyCode.TAB &&
                             that.tagInput.val() !== ''
@@ -266,17 +266,17 @@
                         }
 
                         // Autocomplete will create its own tag from a selection and close automatically.
-                        if (!(that.options.autocomplete.autoFocus && that.tagInput.data('autocomplete-open'))) {
-                            that.tagInput.autocomplete('close');
-                            that.createTag(that._cleanedInput());
-                        }
+                        //if (!(that.options.autocomplete.autoFocus && that.tagInput.data('autocomplete-open'))) {
+                          //  that.tagInput.autocomplete('close');
+                         //   that.createTag(that._cleanedInput());
+                       // }
                     }
                 }).blur(function(e){
                     // Create a tag when the element loses focus.
                     // If autocomplete is enabled and suggestion was clicked, don't add it.
-                    if (!that.tagInput.data('autocomplete-open')) {
-                        that.createTag(that._cleanedInput());
-                    }
+                    //if (!that.tagInput.data('autocomplete-open')) {
+                      //  that.createTag(that._cleanedInput());
+                    //}
                 });
 
             // Autocomplete.

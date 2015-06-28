@@ -41,7 +41,7 @@ $(".buchstabeB").addClass("active_innerstate");
 });
 
 
-$(".suche").keypress( function(e){
+$(document).keypress( function(e){
 	if(e.which == 13) {
 
       event.preventDefault();
@@ -63,14 +63,14 @@ $(".suche").hover( function(){
 	});
 
 
-$(".container_suche").keypress( function(e){
+$(document).keypress( function(e){
 
 
 		if(e.which == 13) {
 		
       event.preventDefault();
 
-		$(this).toggleClass("active");
+		$(".container_suche").toggleClass("active");
 		$(".favo").toggleClass("active_fav");
 
 
@@ -204,9 +204,39 @@ $(".platzhalter").click(function(){
 		$(".guide").toggleClass("guide_off");
 });
 
+$(".inner1").click(function(){
+
+		$(".ergebnisse").removeClass("active_ergebnisse");
+		$(".buchstabeS").removeClass("active_innerstate");
+		
+		$(".buchstabeB").removeClass("active_innerstate");
+		
+		$(".tag1").toggleClass("active_innerstate");
+		var setted = 1;
+
+	if(setted==1){
+
+
+		$("#allowSpacesTags").addClass("search_off");
+
+	}
+
+		
+});
+$("#allowSpacesTags").click(function(){
+
+		$(this).removeClass("search_off");
+	
+
+		
+});
+
+
+
 $(".inner1").hover(function(){
 
 		$(this).toggleClass("hover_inner1");
+		$(".ghost1").toggleClass("active_innerstate");
 
 		
 });
@@ -214,7 +244,7 @@ $(".inner1").hover(function(){
 $(".innerstate2").hover(function(){
 
 		$(this).toggleClass("hover_inner1");
-
+		$(".ghost2").toggleClass("active_innerstate");
 		
 });
 
