@@ -10,8 +10,7 @@
 
 	
 		<!-------------------------<!--! STYLES ------------------------------>
-		<link rel="stylesheet" type="text/css" href="styles/reset.css">
-		<link rel="stylesheet" type="text/css" href="styles/style.css">
+	
 		<style type="text/css">
       		html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
     	</style>
@@ -24,11 +23,10 @@
 				
 		<!-------------------------<!--! SCRIPTS ------------------------------>
 		<script type="text/javascript" src="scripts/script.js"></script>
-	    <script type="text/javascript" src="scripts/karte.js"></script>
 	
 		    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset-fonts/reset-fonts.css">
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/base/base-min.css">
-    <link href="http://fonts.googleapis.com/css?family=Brawler" rel="stylesheet" type="text/css">
+  
     <link href="_static/master.css" rel="stylesheet" type="text/css">
     <link href="_static/subpage.css" rel="stylesheet" type="text/css">
     <link href="_static/examples.css" rel="stylesheet" type="text/css">
@@ -54,7 +52,8 @@
     <!-- The real deal -->
     <script src="js/tag-it.js" type="text/javascript" charset="utf-8"></script>
 
-
+		<link rel="stylesheet" type="text/css" href="styles/reset.css">
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
 
 	</head>
 	
@@ -62,69 +61,9 @@
 	
 	<body>
 
-	    <script>
-        $(function(){
-            var sampleTags = ['schwäbisch gmünd', 'morgen', 'freitag', 'nächste woche', 'regen', 'wolken', 'wind', 'berlin'];
-
-        
-
-            //-------------------------------
-            // Tag events
-            //-------------------------------
-            var eventTags = $('#eventTags');
-
-            var addEvent = function(text) {
-                $('#events_container').append(text + '<br>');
-            };
-
-            eventTags.tagit({
-                availableTags: sampleTags,
-                beforeTagAdded: function(evt, ui) {
-                    if (!ui.duringInitialization) {
-                        addEvent('beforeTagAdded: ' + eventTags.tagit('tagLabel', ui.tag));
-                    }
-                },
-                afterTagAdded: function(evt, ui) {
-                    if (!ui.duringInitialization) {
-                        addEvent('afterTagAdded: ' + eventTags.tagit('tagLabel', ui.tag));
-                    }
-                },
-                beforeTagRemoved: function(evt, ui) {
-                    addEvent('beforeTagRemoved: ' + eventTags.tagit('tagLabel', ui.tag));
-                },
-                afterTagRemoved: function(evt, ui) {
-                    addEvent('afterTagRemoved: ' + eventTags.tagit('tagLabel', ui.tag));
-                },
-                onTagClicked: function(evt, ui) {
-                    addEvent('onTagClicked: ' + eventTags.tagit('tagLabel', ui.tag));
-                },
-                onTagExists: function(evt, ui) {
-                    addEvent('onTagExists: ' + eventTags.tagit('tagLabel', ui.existingTag));
-                }
-            });
-
-
-            //-------------------------------
-            // Allow spaces without quotes.
-            //-------------------------------
-            $('#allowSpacesTags').tagit({
-                availableTags: sampleTags,
-                allowSpaces: true
-            });
-
-           
-            //-------------------------------
-            // Remove confirmation
-            //-------------------------------
-            $('#removeConfirmationTags').tagit({
-                availableTags: sampleTags,
-                removeConfirmation: true
-            });
-            
-        });
-    </script>
-
 		<div id="map-canvas"></div>
+
+		<div class = "niederschlagTest" src="imgs/Niederschlag.gif" alt="Niederschlag1"> </div>
 
 
 		
@@ -140,12 +79,12 @@
 		<img class="background" src="imgs/temperatur.png" width="100%"  height="100%">
 		
 		-->
-		<!--<img src="imgs/logo.svg">-->
+		<!--<img src="imgs/logo.svg">
 
 
 		
-		<img src="imgs/logo.svg">
-		-->
+		<!--<img src="imgs/logo.svg">-->
+		
 
 		
 
@@ -160,7 +99,17 @@
 		<div class="navi">
 			
 
-		<div class="profilpic"></div>
+
+		<div class="container_aktuelles">
+			
+			
+		<img src="aktuelles_wetter.png" width="400px"  height="146px">
+		
+
+
+		</div>
+
+		<div class="profilpic"><img src="profilpic.png" width="30px"  height="30px"></div>
 		<div class="Name">Dominik</div>
 		<div class="profileinst">
 
@@ -168,10 +117,10 @@
 		
 		<div class="tipp1_profil">
 
-				<div class="logo1_profil"></div>
+				<div class="logo1_profil"><img src="icon_schirm.png" width="30px"  height="30px"></div>
 				
-				<p>Gegen <b>17Uhr</b> wird es in <b>Schwäbisch Gmünd</b> 
-				einen kurzen <b>Regenschauer</b> geben.</p>
+				&nbsp;&nbsp;Gegen <b>17Uhr</b> wird es in <b>Schwäbisch Gmünd</b> 
+				&nbsp;&nbsp;einen kurzen <b>Regenschauer</b> geben.
 				</div>
 	<div class="guide">
 		<div class="bars_bez">
@@ -200,7 +149,7 @@
 
 		<div class="trennleiste">
 
-			<div class="platzhalter"></div>
+			<div class="platzhalter"><img src="rad.svg" width="15px"  height="15px"></div>
 		
 			<div class="text">Konto</div>
 
@@ -208,13 +157,13 @@
 		</div>
 
 	<div class="konto_klein">
-		<div class="profilbild_big"></div>
+		<div class="profilbild_big"><img src="profilpic.png" width="50px"  height="50px"></div>
 
 		<div class="daten">
 
 				
 			<p>Name: <b>Dominik Merle</b></p>
-			<p>E-mail: <b>dominik-merle@hfg-gmuend.de</b></p>
+			<p>E-mail: <b>dominik.merle@hfg-gmuend.de</b></p>
 
 		</div>		
 
@@ -228,10 +177,10 @@
 		<div class="container_tipps">
 			<div class="tipp1">
 
-				<div class="logo1"></div>
+				<div class="logo1"><img src="icon_schirm.png" width="30px"  height="30px"></div>
 
-				Gegen <b>17Uhr</b> wird es in <b>Schwäbisch Gmünd</b> 
-				einen kurzen <b>Regenschauer</b> geben.
+				&nbsp;&nbsp;Gegen <b>17Uhr</b> wird es in <b>Schwäbisch Gmünd</b> 
+				&nbsp;&nbsp;einen kurzen <b>Regenschauer</b> geben.
 				</div>
 
 			
@@ -240,10 +189,10 @@
 
 			<div class="tipp2">
 
-				<div class="logo2"></div>
+				<div class="logo2"><img src="icon_jacke.png" width="30px"  height="30px"></div>
 
-				Heute <b>Nacht</b> wird es <b>kalt</b> in 
-				<b>Schwäbisch Gmünd</b>, nimm lieber eine 
+				&nbsp;&nbsp;Heute <b>Nacht</b> wird es <b>kalt</b> in 
+				<b>Schwäbisch Gmünd</b>, &nbsp;&nbsp;nimm lieber eine 
 				<b>Jacke</b> mit
 				</div>
 
@@ -253,19 +202,22 @@
 
   
 
-    
 
 <div class="container_suche">
+	
+		
 		
 		<div class="suche"> 
 
+		
+
 		 <form>
             
-            <ul id="allowSpacesTags" style="height: 40px;
+            <ul id="allowSpacesTags" style="height: 50px;
     width: 421px;margin-top: 0px;margin-bottom: 0px;"></ul>
         </form>
 
-        <div class="suchergebnisse"></div>
+      
 		
 			<div class="favo fav1">
 				
@@ -301,10 +253,10 @@
 	<div class="bar">
 		<div class="container_baric">
 
-			<div class="baric regen"></div>
-			<div class="baric unwetter"></div>
-			<div class="baric pollen"></div>
-			<div class="baric wolken"></div>
+			<div class="baric regen"><img src="icon_regen.png" width="7px"  height="12px"></div>
+			<div class="baric unwetter"><img src="icon_witter.png" width="7px"  height="12px"></div>
+			<div class="baric pollen"><img src="icon_pollen.png" width="12px"  height="12px"></div>
+			<div class="baric wolken"><img src="icon_wolke.png" width="14px"  height="11px"></div>
 
 		</div>
 
@@ -336,51 +288,287 @@
 <div class="container_vohersage">
 	
 	
-		<div class="karten karte1">
-			<div class="inhalt_karte">
-			<section class = "front">
-				<header>
-					<h2>Montag</h2>
-					<h4>15.06.15</h4>
-				</header>
+	<div class="karten karte1">
+		
+		<div class = "beschreibung">
 
-			<div class = "beschreibung">
-				<img class="vorhersage_icon" src="imgs/assets/icons/schauer3.svg" alt="wettericon" title="schauer_icon" width="80%">
+			
+					<p><b>Montag</b></p>
+					<font size="-0.5">15.06.15</font>
+
+		</div>
+				
+
+		<div class="icon_holder">
+				<img class="vorhersage_icon" src="imgs/assets/icons/wolkig3.svg" alt="wettericon" title="schauer_icon" width="90%" height="90%">
 				<p class = "fav1_typox"></p>
+		</div>
 
-			<h3>Schauer</h3>
-			</div>
-
+		<div class="beschreibung_icon">
+			Wolkig
+		</div>
+			
+			
 			<div class = "vorhersage_temperatur">
-				<h1>20°</h1>
-				<h5>12°</h5>
+				26°
+				
+				<font size="+1">12°</font>
 			</div>
+			
+			<div class="details">
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>gefühlte 17°</p>
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>Regen 30%</p>
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>Südostwind</p>
+				
+			
+			</div>
+	</div>
 
-			<article class = "vorhersage_detail">
-				<p>
-					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
-					gefühlte 17°
-				</p>
-				<p>
-					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
-					Regen 70%
-				</p>
-				<p>
-					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
-					Leichte Brise
-				</p>
-			</article>
+		
+		<div class="karten karte2">
+			
+			<div class = "beschreibung">
 
-			</section>
+			
+					<p><b>Dienstag</b></p>
+					<font size="-0.5">16.06.15</font>
+
+		</div>
+				
+
+		<div class="icon_holder">
+				<img class="vorhersage_icon" src="imgs/assets/icons/leichtwolkig3.svg" alt="wettericon" title="schauer_icon" width="90%" height="90%">
+				<p class = "fav1_typox"></p>
+		</div>
+
+		<div class="beschreibung_icon">
+			Leicht bewölkt
+		</div>
+			
+			
+			<div class = "vorhersage_temperatur">
+				<b>28°/
+				
+				13°</b>
+			</div>
+			
+			<div class="details">
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>gefühlte 17°</p>
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>Regen 20%</p>
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>Nordwind</p>
+				
+			
+			</div>
+		</div>
+		<div class="karten karte3">
+			
+			<div class = "beschreibung">
+
+			
+					<p><b>Mittwoch</b></p>
+					<font size="-0.5">17.06.15</font>
+
+		</div>
+				
+
+		<div class="icon_holder">
+				<img class="vorhersage_icon" src="imgs/assets/icons/sonnig3.svg" alt="wettericon" title="schauer_icon" width="90%" height="90%">
+				<p class = "fav1_typox"></p>
+		</div>
+
+		<div class="beschreibung_icon">
+			Sonnig
+		</div>
+			
+			
+			<div class = "vorhersage_temperatur">
+				<b>32°/
+				
+				14°</b>
+			</div>
+			
+			<div class="details">
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>gefühlte 17°</p>
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>Regen 10%</p>
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>Nordwind</p>
+				
+			
+			</div>
+		</div>
+		<div class="karten karte4"><div class = "beschreibung">
+
+			
+					<p><b>Donnerstag</b></p>
+					<font size="-0.5">18.06.15</font>
+
+		</div>
+				
+
+		<div class="icon_holder">
+				<img class="vorhersage_icon" src="imgs/assets/icons/sonnig3.svg" alt="wettericon" title="schauer_icon" width="90%" height="90%">
+				<p class = "fav1_typox"></p>
+		</div>
+
+		<div class="beschreibung_icon">
+			Sonnig
+		</div>
+			
+			
+			<div class = "vorhersage_temperatur">
+				<b>32°/
+				
+				16°</b>
+			</div>
+			
+			<div class="details">
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>gefühlte 17°</p>
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>Regen 0%</p>
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>Leichte Brise</p>
+				
+			
 			</div>
 		</div>
 
-		<div class="karten karte2"></div>
-		<div class="karten karte3"></div>
-		<div class="karten karte4"></div>
-		<div class="karten karte5"></div>
-		<div class="karten karte6"></div>
-		<div class="karten karte7"></div>
+		
+		<div class="karten karte5"><div class = "beschreibung">
+
+			
+					<p><b>Freitag</b></p>
+					<font size="-0.5">19.06.15</font>
+
+		</div>
+				
+
+		<div class="icon_holder">
+				<img class="vorhersage_icon" src="imgs/assets/icons/sonnig3.svg" alt="wettericon" title="schauer_icon" 
+				width="90%" height="90%">
+				<p class = "fav1_typox"></p>
+		</div>
+
+		<div class="beschreibung_icon">
+			Sonnig
+		</div>
+			
+			
+			<div class = "vorhersage_temperatur">
+				<b>32°/
+				
+				16°</b>
+			</div>
+			
+			<div class="details">
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>gefühlte 17°</p>
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>Regen 0%</p>
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>Leichte Brise</p>
+				
+			
+			</div></div>
+		<div class="karten karte6"><div class = "beschreibung">
+
+			
+					<p><b>Samstag</b></p>
+					<font size="-0.5">20.06.15</font>
+
+		</div>
+				
+
+		<div class="icon_holder">
+				<img class="vorhersage_icon" src="imgs/assets/icons/sonnig3.svg" alt="wettericon" title="schauer_icon" width="90%" height="90%">
+				<p class = "fav1_typox"></p>
+		</div>
+
+		<div class="beschreibung_icon">
+			Sonnig
+		</div>
+			
+			
+			<div class = "vorhersage_temperatur">
+				<b>32°/
+				
+				16°</b>
+			</div>
+			
+			<div class="details">
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>gefühlte 17°</p>
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>Regen 0%</p>
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>Leichte Brise</p>
+				
+			
+			</div></div>
+		<div class="karten karte7"><div class = "beschreibung">
+
+			
+					<p><b>Sonntag</b></p>
+					<font size="-0.5">21.06.15</font>
+
+		</div>
+				
+
+		<div class="icon_holder">
+				<img class="vorhersage_icon" src="imgs/assets/icons/sonnig3.svg" alt="wettericon" title="schauer_icon" width="90%" height="90%">
+				<p class = "fav1_typox"></p>
+		</div>
+
+		<div class="beschreibung_icon">
+			Sonnig
+		</div>
+			
+			
+			<div class = "vorhersage_temperatur">
+				<b>33°/
+				
+				20°</b>
+			</div>
+			
+			<div class="details">
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>gefühlte 17°</p>
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>Regen 0%</p>
+				
+					<!--<<img src="imgs/assets/icons/herz.svg" alt="gefühlt icon">-->
+					<p>Leichte Brise</p>
+				
+			
+			</div></div>
 		
 		
 		
