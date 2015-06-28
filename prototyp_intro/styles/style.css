@@ -82,10 +82,10 @@ opacity: 1;
 		top:8px;
 
 		z-index: 9;
+}
 
-	
-
-
+.profilpic:hover{
+	cursor:pointer;
 }
 
 
@@ -582,8 +582,6 @@ opacity: 1;
 
 .suche{
 
-
-
 		width:420px;
 		height:50px;
 
@@ -596,10 +594,11 @@ opacity: 1;
 		
 		opacity: 0.9;
 
+}
 
-		
-
-
+.suche:hover{
+		background-color: #e6e6e6;
+		cursor: pointer;
 }
 
 .favo{
@@ -809,7 +808,7 @@ bottom:0px;
 	bottom:-550px;
 	left:0px;
 
-
+	opacity: 0.65;
 	
 
 	transition: all 0.6s ease;
@@ -822,18 +821,14 @@ bottom:0px;
 
 
 .karten{
-
 	width:9%;
 	height:550px;
 
 	background-color: #fff;
-	
 
 	border-right: 1px solid rgba(0,0,0,0.1);
 
 	float:left;
-
-	opacity:0.65;
 
 	transition:all 600ms cubic-bezier(0.86, 0, 0.07, 1) ;
 
@@ -861,14 +856,13 @@ width:12%;
 .sechszehn_tage{
 
 
-width:6%;
+width:6.5%;
 
 
 }
 
 
 .active_vohersage{
-
 
 	bottom:-550px;
 
@@ -1011,6 +1005,7 @@ text-align: left;
 
 
 
+
 .details{
 
 width:100%;
@@ -1022,7 +1017,6 @@ padding-left: 30px;
 text-align: left;
 
 font-size: 9pt;
-
 
 }
 
@@ -1040,11 +1034,6 @@ padding-left:100px;
 	margin-top: 10px;
 }
 
-
-/*suche*/
-.ui-autocomplete-input:focus {color:green;
-	border:2px outset green;
-}
 
 
 .baric{
@@ -1217,6 +1206,17 @@ background-color: #fff;
 
 
 
+}
+
+
+/*GIF Overlays Karte*/
+.niederschlagTest{
+	position: fixed;
+	width: 400px;
+	height: 225px;
+	top: 300px;
+	left: 100px;
+	z-index: 10;
 }
 
 
