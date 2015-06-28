@@ -9,7 +9,7 @@ body	{
 	color: #000000;
 	font-weight: 400;
 	font-size: 20px;
-
+	
 	line-height: 1.2em;
 	cursor: default;
 	
@@ -19,14 +19,6 @@ body	{
 	font-feature-settings: 'tnum';
 
 	overflow-x:hidden;
-
-
-	
-
-	
-
-
-	
 }
 
 @media screen 
@@ -39,522 +31,258 @@ body	{
 
 
 .container_aktuelles{
-
-
-position: absolute;
-top:70px;
-left:40px;
-
-opacity: 0;
-
-z-index: 1;
-
-transition:all 0.5s ease;
-
+     position: absolute;
+     top:70px;
+     left:40px;
+     opacity: 0;
+     z-index: 1;
+     transition:all 0.5s ease;
 }
 
 .move_aktuelles{
-
-top:-200px;
-
-
+     top:-200px;
 }
 
 .active_aktuelles{
-
-opacity: 1;
-
-
+     opacity: 1;
 }
 
 .profilpic{
+     width:30px;
+	height:30px;
+	border-radius: 50%;
+	background-color:#191919;
+	position: absolute;
+	right:8%;
+	top:4px;
 
-		width:30px;
-		height:30px;
-
-		border-radius: 50%;
-
-		background-color:#191919;
-
-		position: absolute;
-
-		right:8%;
-		top:8px;
-
-		z-index: 9;
 }
 
 .profilpic:hover{
 	cursor:pointer;
 }
 
-
-
-
 .Name{
-
-		font-size: 10pt;
-		position: absolute;
-		left:85%;
-
-		top:10px;
-
-
+	font-size: 10pt;
+	position: absolute;
+	left:82%;
+	top:6px;
 }
 .profileinst{
-
-		width:300px;
-		height:270px;
-
-		
-
-		background-color:#fafafa;
-
-		position: absolute;
-
-		right:60px;
-		top:-300px;
-
-		z-index: 8;
-
-		transition: all 0.5s ease;
-
-
-		
-
-		font-size: 9pt;
-
-		float:left;
-
-
-	
-
-
+	width:300px;
+	height:270px;
+	background-color:#fafafa;
+	position: absolute;
+	right:60px;
+	top:-300px;
+	transition: all 0.5s ease;
+	font-size: 9pt;
+	float:left;
 }
 
 
 .tipp1_profil{
-
-height:50px;
-width:100%;
-
-font-size: 9pt;
-line-height: 1.6em;
-
-
-
-background-color: #fff;
-
-border-bottom: 1px solid rgba(0,0,0,0.1);
-
-
-
-
+     height:50px;
+     width:100%;
+     font-size: 8pt;
+     line-height: 1.4em;
+     background-color: #fff;
+     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .logo1_profil{
-	
-		width:50px;
-		height:50px;
-
-		background-color: #5c7cfc;
-
-		float:left;
-
-		padding:10px;
-
-		
-
-		
-
+     width:50px;
+	height:50px;
+	background-color: #5c7cfc;
+	float:left;
 }
 
 .guide{
-
-width:100%;
-
-height:115px;
-
-
-
+     width:100%;
+     height:115px;
 }
 
 
 .bars_bez{
-
-position: absolute;
-top:60px;
-left:10px;
-float: left;
-
-width: 100%;
-
-
+     position: absolute;
+     top:60px;
+     left:10px;
+     float: left;
+     width: 100%;
 }
 
 .bars{
-
-position: absolute;
-top:65px;
-left:130px;
-float: left;
-
-width: 100%;
-
-
+     position: absolute;
+     top:65px;
+     left:130px;
+     float: left;
+     width: 100%;
 }
 
 .bar_back{
-
 	float:left;
-
 	background-color: #e8e8e8;
 	width:100px;
 	height:10px;
-
 	border-radius: 3px;
-
-
-
 }
 
 .inner{
-
 	width:30%;
-
 	background-color: #fce544;
 }
 
 .inner2{
-
 	width:70%;
-
 	background-color: #79bbf2;
 }
 .inner3{
-
 	width:80%;
-
 	background-color: #79bbf2;
 }
 .inner4{
-
 	width:0%;
-
 	background-color: #79bbf2;
 }
 
-
 .trennleiste{
-	
 	width:100%;
 	height:25px;
-
 	background-color: #fff;
-
-	
-
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 	border-top: 1px solid rgba(0,0,0,0.1);
-
-
-
-	
-
-
-
-
 }
 
 .platzhalter{
-
-	width: 15px;
-	height: 15px;
-
-	border-radius: 50%;
-
-	float:left;
-
-	position: absolute;
-	left:2%;
-
 	padding:2px;
-
-
 }
 
 .text{
-
 	position: absolute;
 	right:2%;
-	
 }
 
 .konto_klein{
-
 	width:100%;
-
 	height:80px;
-
 	padding:10px;
-
 }
 
 .profilbild_big{
-
-
-	
-
 	width: 50px;
 	height:50px;
-
 	border-radius:50%;
-
 	background-color: #000;
-
 	float: left;
-	
-
-
-
-
 }
 
 .daten{
-
-		font-size: 8pt;
-		line-height: 1.8em;
-		position: absolute;
-		left: 75px;
-
-
+	font-size: 8pt;
+	line-height: 1.8em;
+	position: absolute;
+	left: 75px;
 }
 
-
 .einstel_konto{
-
-height:400px;
-
-
+     height:400px;
 }
 
 .einstel_trenn{
 
-
-
-
 }
 
-
 .guide_off{
-
-display:none;
-
+     display:none;
 }
 
 .container_tipps{
-		
-		width:320px;
-		height:158px;
-
-		position: fixed;
-
-		right:-320px;
-		top:70px;
-
-		
-		
-
+	width:320px;
+	height:158px;
+	position: fixed;
+	right:-320px;
+	top:70px;
 	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-	
-
-
-
-
 }
 
-
 .tipp1{
-
-		width:320px;
-		height:50px;
-
-		
-
-		background-color:#fff;
-
-		
-		
-		z-index: 0;
-	
-
-		
-
-		opacity:0.9;
-
-		color:#808080;
-
-		font-size: 9pt;
-
-		float:left;
-
-
-		margin:2px;
-
-
-	box-shadow: 0px 1px 5px #999999;
-
-
+	width:320px;
+	height:50px;
+	background-color:#fff;
+	opacity:0.9;
+	color:#808080;
+	font-size: 9pt;
+	float:left;
+	margin:2px;
+     box-shadow: 0px 1px 5px #999999;
 }
 
 .logo1{
-	
-		width:50px;
-		height:100%;
-
-		background-color: #5c7cfc;
-
-		float:left;
-
-		padding:10px;
-
-		
-
-		
-
+	width:50px;
+	height:100%;
+	background-color: #5c7cfc;
+	float:left;
+	padding:10px;
 }
 
-
 .tipp2{
-
-		width:320px;
-		height:50px;
-
-		
-
-		background-color:#fff;
-
-		
-		
-		z-index: 0;
-	
-
-		
-
-		opacity:0.9;
-
-		color:#808080;
-
-		font-size: 9pt;
-
-		float:left;
-
-		margin:2px;
-
-		box-shadow: 0px 1px 5px #999999;
-
-
-	
-
-
+	width:320px;
+	height:50px;
+	background-color:#fff;
+	opacity:0.9;
+	color:#808080;
+	font-size: 9pt;
+	float:left;
+	margin:2px;
+	box-shadow: 0px 1px 5px #999999;
 }
 
 .logo2{
-	
-		width:50px;
-		height:100%;
-
-		background-color: #67b9f9;
-
-		float:left;
-
-		padding:10px;
-
-		
-
-		
-
+	width:50px;
+	height:100%;
+	background-color: #67b9f9;
+	float:left;
+	padding:10px;
 }
 
 .showup{
-
-margin-right:380px;
-
-
+     margin-right:380px;
 }
 
 .active_profil{
-
-
 	top:50px;
-
-
 }
-
 
 .clearfix:after {
-	content: "";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
+     content: "";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
 }
-
-
-
-
-
 
 .background{
-
-
-	
-
- -webkit-filter: blur(6px); 
-
-transition:all ease 0.5s;
-
-text-align: center;
-}
-
-.active_karte{
-
--webkit-filter: blur(0px); 
-z-index: 9;
-
+     -webkit-filter: blur(6px); 
+     transition:all ease 0.5s;
+     text-align: center;
 }
 
 .fadeout{
-
-	opacity: 0.9;
-
-
+     opacity: 0.9;
 }
 
-
 .container_suche{
-
-width: 420px;
-height:120px;
-
-position: fixed;
-
-top:200px;
-left:calc(50% - 210px);
-
-transition:all ease 0.5s;
-
-z-index: 9;
-
-font-size: 10pt;
-
-
+     width: 420px;
+     height:120px;
+     position: fixed;
+     top:200px;
+     left:calc(50% - 210px);
+     transition:all ease 0.5s;
+     z-index: 9;
+     font-size: 10pt;
 }
 
 .ergebnisse{
-
 	width:100%;
 	height:0px;
 	background-color: #fff;
@@ -573,6 +301,7 @@ display:none;
 }
 
 .inner1{
+<<<<<<< HEAD
 
 	
 	
@@ -586,6 +315,8 @@ display:none;
 .innerstate2{
 
 	
+=======
+>>>>>>> origin/master
 	width:100%;
 	height:30px;
 	
@@ -622,8 +353,6 @@ display:none;
 	height:30px;
 	
 	transition:all ease 0.5s;
-
-
 }
 
 .hover_inner1{
@@ -635,6 +364,7 @@ background-color: #9c9c9c;
 
 
 .active_ergebnisse{
+<<<<<<< HEAD
 
 height:100px;
 
@@ -647,258 +377,148 @@ height:100px;
 display: inline;
 
 
+=======
+     height:100px;
+     opacity: 1;
+>>>>>>> origin/master
 }
 
-
 .suche{
-
-		width:420px;
-		height:50px;
-
-		background-color: #fff;
-
-
-		transition:all 2s;
-
-		border-radius: 2px;
-		
-		opacity: 0.9;
-
+	width:420px;
+	height:50px;
+	background-color: #fff;
+	transition:all 2s;
+	border-radius: 2px;
+	opacity: 0.9;
 }
 
 .suche:hover{
-		background-color: #e6e6e6;
-		cursor: pointer;
+     background-color: #e6e6e6;
+	cursor: pointer;
 }
 
 .favo{
-
-		width:140px;
-		height:80px;
-
-		/*background-color:#f2fffb;*/
-		float: left;	
-		
-
-		transition:all 0.5s;
-
-
-
-
-
-
-
-			
-
-
-
+	width:140px;
+     height:80px;
+     /*background-color:#f2fffb;*/
+	float: left;	
+	transition:all 0.5s;
 }
 
 .fav1{
-
-	background-color: #fff;
-	opacity:0.8;
-
-	border-right: 1px solid rgba(0,0,0,0.5);
-
-	float:left;
-
-	font-size: 8pt;
-	
-
-
+     background-color: #fff;
+     opacity:0.8;
+     border-right: 1px solid rgba(0,0,0,0.5);
+     float:left;
+     font-size: 8pt;
 }
 
 .fav2{
-
 	background-color: #fff;
 	opacity:0.8;
-
-	
-
-
 }
 
 .fav3{
-
 	background-color: #fff;
 	opacity:0.8;
-	
 	border-left: 1px solid rgba(0,0,0,0.5);
-
-
 }
-
-
-
 
 .navi{
-
-		width:100%;
-		height:50px;
-
-		background-color: #fff;
-
-		position: fixed;
-
-		
-
-		top:0px;
-		left:0px;
-
-		transition:all 600ms cubic-bezier(0.86, 0, 0.07, 1);
-
-		box-shadow: 0px 1px 5px #999999;
-
-		opacity: 0.9;
-		
-		z-index: 9;
+	width:100%;
+	height:50px;
+	background-color: #fff;
+	position: fixed;
+	top:0px;
+	left:0px;
+	transition:all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+	box-shadow: 0px 1px 5px #999999;
+	opacity: 0.9;
+	z-index: 9;
 }
 
-
 .active{
-
-			
-			margin-top: 0px;
-			top:0px;
-			
-
-
-
+	margin-top: 0px;
+	top:0px;
 }
 
 .active_fav{
-
 	height:0px;
-	
-
-
-
-
 }
+
 .hover_fav{
-
 	height:80px;
-
-
-
 }
 
 .active_suche{
-
 	background-color:#ecf1f0; 
-
-			margin-top: 0px;
-			top:0px;
-
-
-
-
-
+	margin-top: 0px;
+	top:0px;
 }
 
 .active_back{
-
-
-display:none;
-
-
-
+     display:none;
 }
 
 .container_diagramm{
-
-
 	position: fixed;
 	bottom:-130px;
-
-
 	width:100%;
-	height:30px;
-
+	height:40px;
 	transition:all 1s;
-
-	z-index:1;
-
-
 }
 
 .active_dia{
-
-bottom:0px;
-
-
-
+     bottom:0px;
 }
 
-
-
-
-
-
-
 .bar{
-
 	width:100%;
-	height:30px;
-
+	height:40px;
 	background-color: #000;
-
 }
 
 .diagramm{
-
-
 	position: fixed;
 	bottom:-100px;
-
 	width:100%;
-
-	height:100px;
-
+	height:150px;
 	background-color: #f2fffb;
-
-
 	transition:all 0.5s ease;
-
-
-
-
-
-
 }
 
 .container_vohersage{
-
-
 	width:calc(100% + 2000px);
-
 	position: fixed;
-
 	bottom:-550px;
+<<<<<<< HEAD
 	left:0px;
 
 	
 	
 
+=======
+     left:0px;
+	opacity: 0.65;
+>>>>>>> origin/master
 	transition: all 0.6s ease;
-
-	z-index:0;
-
 	overflow:scroll;
-
 }
 
 
 .karten{
 	width:9%;
 	height:550px;
+<<<<<<< HEAD
 
 	background-color: rgba(255,255,255,0.65);
 
+=======
+	background-color: #fff;
+>>>>>>> origin/master
 	border-right: 1px solid rgba(0,0,0,0.1);
-
 	float:left;
+<<<<<<< HEAD
 
 	transition:all 600ms cubic-bezier(0.86, 0, 0.07, 1) ;
 
@@ -907,108 +527,64 @@ bottom:0px;
 	
 
 
+=======
+	transition:all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+>>>>>>> origin/master
 }
 
-
 .little_card{
-
 	width:6%;
-
-
 }
 
 .drei_tage{
-
-	
-width:12%;
-
+     width:12%;
 }
 
 .sechszehn_tage{
-
-
-width:6.5%;
-
-
+     width:6.5%;
 }
 
-
 .active_vohersage{
-
 	bottom:-550px;
-
-
 }
 
 .click_v{
-
-
-	bottom:30px;
-
-
+	bottom:40px;
 }
 
 .remove_1000{
-
-
-display:none;
-
-
+     display:none;
 }
 
 .active_1000{
-
-width:16%;
-
-
+     width:16%;
 }
 
 .active_900{
-
-
-width:19%;
-
-
+     width:19%;
 }
 
 .active_800{
-
-
-width:25%;
-
-
+     width:25%;
 }
 
 .active_700{
-
-
-width:30%;
-
+     width:30%;
 }
 
 .scale_back{
-
-
-transform:scale(1.1);
-
+     transform:scale(1.1);
 }
 
 .scale_back2{
-
-
-transform:scale(1.2);
-
+     transform:scale(1.2);
 }
 
 .inhalt_karte{
-
-width:100%;
-position: relative;
-left:10%;
-
-
+     width:100%;
+     position: relative;
+     left:10%;
 }
-
 
 /*Vorhersage*/
 .front{
@@ -1018,6 +594,7 @@ left:10%;
 }
 
 .beschreibung{
+<<<<<<< HEAD
 
 
 
@@ -1067,28 +644,47 @@ font-size: 50pt;
 
 
 
+=======
+     padding-left: 30px;
+     width:100%;
+     height:50px;
+     text-align: left;
+}
+
+.beschreibung_icon{
+     width:100%;
+     height:50px;
+     padding-left:30px;
+     text-align: left;
+}
+
+.vorhersage_temperatur{
+     width:100%;
+     height:50px;
+     padding-left: 30px;
+     text-align: left;
+     font-size: 50pt;
+>>>>>>> origin/master
 }
 
 
 
 .icon_holder{
 
+
 width:100%;
 height:120px;
 
 
 
-transition:all 0.5s ease;
-text-align: left;
+	transition:all 0.5s ease;
+	text-align: left;
 
 
 }
 
-
-
-
-
 .details{
+
 
 width:100%;
 height:150px;
@@ -1102,15 +698,12 @@ font-size: 9pt;
 
 transition:all 0.5s ease;
 
+
 }
 
 
 .versch_text{
-
-padding-left:100px;
-
-
-
+     padding-left:100px;
 }
 
 .fav_icon{
@@ -1118,180 +711,88 @@ padding-left:100px;
 	margin-top: 10px;
 }
 
-
-
 .baric{
-
-		width:20px;
-		height:20px;
-
-		border-radius: 20px;
-		border:1px solid #fff;
-
-		float:left;
-
-		margin: 5px;
-
-		color:#fff;
-
-		font-size:7pt;
-
-		text-align: center;
-
-		vertical-align: middle;
-
-		transition: all 0.6s ease;
-
-		
-		padding-bottom: 5px;
-
-
+	width:30px;
+	height:30px;
+	border-radius: 20px;
+	border:1px solid #fff;
+	float:left;
+	margin: 5px;
+	color:#fff;
+	font-size:7pt;
+	text-align: center;
+	vertical-align: middle;
+	transition: all 0.6s ease;
+	padding-bottom: 5px;
 }
 
-
-
-
-
 .container_baric{
-
-		position: absolute;
-		left:8%;
-
-		
-
-
-
+	position: absolute;
+	left:8%;
 }
 
 .container_teilung{
-
-		position: absolute;
-		right:8%;
-
-		
-
-
-
+	position: absolute;
+	right:8%;
 }
 
 .loc{
-
-background-color: #000;
-
+     background-color: #000;
 }
 
-
 .remove_loc{
-
-background-color:#000;
-
-
+     background-color:#000;
 }
 
 .active_tag1{
-
-background-color: #fff;
-
-
+     background-color: #fff;
 }
 
-
-
 .play{
+     position: absolute;
+     left:calc(50% + 10px);
+     bottom:7px;
 
-position: absolute;
-left:calc(50% + 10px);
-bottom:3px;
-
-width: 0;
-height: 0;
-border-style: solid;
-border-width: 10px 0 10px 17.3px;
-border-color: transparent transparent transparent #ffffff;
-border-radius: 2px;
-
+     width: 0;
+     height: 0;
+     border-style: solid;
+     border-width: 12.5px 0 12.5px 21.7px;
+     border-color: transparent transparent transparent #ffffff;
 }
 
 .menu_bar{
-
-	
-	
-
-
 }
 
 .scroll_container{
-
 	position: absolute;
-
 	top:0px;
-
 	width:100%;
-
 	height:100%;
-
-	
-
 	overflow: scroll;
-
 	z-index:8;
-
 	display:none;
-
-
-
-
-
 }
 
-
 .inner_scroll{
-
 	position: absolute;
 	left:calc(50% - 300px);
-
-
 	width:50%;
 	height:5000px;
-
-
-	
-	
-
-
-
-
 }
 
 .display_true{
-
 	display:inline;
-
-
 }
 
-
-
 #map-canvas{
-
-
-overflow: hidden;
-
-
-
+     overflow: hidden;
 }
 
 .suchergebnisse{
-
-width:100%;
-height:200px;
-
-background-color: #fff;
-
-
-
+     width:100%;
+     height:200px;
+     background-color: #fff;
 }
-
 
 /*GIF Overlays Karte*/
 .niederschlagTest{
@@ -1302,8 +803,3 @@ background-color: #fff;
 	left: 100px;
 	z-index: 10;
 }
-
-
-
-
-
