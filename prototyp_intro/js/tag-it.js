@@ -116,7 +116,7 @@
             //     2. INPUT, in which case 'singleField' is overridden to true,
             //        a UL is created and the INPUT is hidden.
             if (this.element.is('input')) {
-                this.tagList = $('<ul></ul>').insertAfter(this.element);
+                this.tagList = $('.ergebnisse').insertAfter(this.element);
                 this.options.singleField = true;
                 this.options.singleFieldNode = this.element;
                 this.element.addClass('tagit-hidden-field');

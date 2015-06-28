@@ -1,5 +1,68 @@
 $(document).ready(function()	{
 
+	       $(function(){
+            var sampleTags = ['schwäbisch gmünd', 'morgen', 'freitag', 'nächste woche', 'regen', 'wolken', 'wind', 'berlin'];
+
+        	
+
+
+            //-------------------------------
+            // Tag events
+            //-------------------------------
+            var eventTags = $('#eventTags');
+
+            var addEvent = function(text) {
+                $('#events_container').append(text + '<br>');
+            };
+
+            eventTags.tagit({
+                availableTags: sampleTags,
+                beforeTagAdded: function(evt, ui) {
+                    if (!ui.duringInitialization) {
+                        addEvent('beforeTagAdded: ' + eventTags.tagit('tagLabel', ui.tag));
+                    }
+                },
+                afterTagAdded: function(evt, ui) {
+                    if (!ui.duringInitialization) {
+                        addEvent('afterTagAdded: ' + eventTags.tagit('tagLabel', ui.tag));
+                    }
+                },
+                beforeTagRemoved: function(evt, ui) {
+                    addEvent('beforeTagRemoved: ' + eventTags.tagit('tagLabel', ui.tag));
+                },
+                afterTagRemoved: function(evt, ui) {
+                    addEvent('afterTagRemoved: ' + eventTags.tagit('tagLabel', ui.tag));
+                },
+                onTagClicked: function(evt, ui) {
+                    addEvent('onTagClicked: ' + eventTags.tagit('tagLabel', ui.tag));
+                },
+                onTagExists: function(evt, ui) {
+                    addEvent('onTagExists: ' + eventTags.tagit('tagLabel', ui.existingTag));
+                }
+            });
+
+
+            //-------------------------------
+            // Allow spaces without quotes.
+            //-------------------------------
+            $('#allowSpacesTags').tagit({
+               	 availableTags: sampleTags,
+                allowSpaces: true
+            });
+
+          
+
+           
+            //-------------------------------
+            // Remove confirmation
+            //-------------------------------
+            $('#removeConfirmationTags').tagit({
+                availableTags: sampleTags,
+                removeConfirmation: true
+            });
+            
+        });
+
 // Hier steht unser Code
 
 //window breite speichern
@@ -8,6 +71,19 @@ console.log(wi);
 
 $(".loc").addClass("active_tag1");
 
+
+$(".suche").keydown( function(e){
+
+$(".ergebnisse").addClass("active_ergebnisse");
+$(".inner1").addClass("active_ergebnisse");	
+
+	if(e.which == 8) {
+
+		$(".ergebnisse").removeClass("active_ergebnisse");
+		$(".inner1").removeClass("active_ergebnisse");
+	}
+
+});
 
 
 $(".suche").keypress( function(e){
@@ -18,6 +94,7 @@ $(".suche").keypress( function(e){
 		$(".container_diagramm").toggleClass("active_dia");
 		$(".container_vohersage").toggleClass("active_vohersage");
 		$(".scroll_container").toggleClass("display_true");
+		$(".container_aktuelles").toggleClass("active_aktuelles");
 	}
 
 	});
@@ -46,17 +123,6 @@ $(".container_suche").keypress( function(e){
 	});
 
 
-
-
-$(".background").click( function(){
-
-		$(this).toggleClass("active_karte");
-
-		$(".container_suche").toggleClass("active_back");
-		$(".container_diagramm").toggleClass("active_back");
-		$(".container_vohersage").toggleClass("active_back");
-
-	});
 
 /*$(".container_vohersage").click( function(){
 
@@ -189,7 +255,9 @@ $(".scroll_container").scroll(function(){
 		$(".container_vohersage").addClass("click_v");
 		$(".diagramm").addClass("click_v");
 
-		$(".background").addClass("fadeout");
+
+
+		$(".container_aktuelles").addClass("move_aktuelles");
 });
 
 
@@ -235,18 +303,13 @@ $(".scroll_container").scroll(function(){
 		$(".loc").addClass("active_tag1");
 		$(".1").removeClass("active_tag1");
 
+		$(".container_aktuelles").removeClass("move_aktuelles");
+
+
+
     }
 
-   
  
-
-/*
-   
-
-   
-
-
-
 	 
 
     if(scrollPos >= 800 ){
@@ -257,6 +320,7 @@ $(".scroll_container").scroll(function(){
     	$(".3").addClass("active_tag1");
 		$(".karten").addClass("drei_tage");
 		$(".16").removeClass("active_tag1");
+		$(".beschreibung").addClass("versch_text");
 
 
 
@@ -298,7 +362,7 @@ $(".scroll_container").scroll(function(){
 
     }
 
-*/
+   
 });
 
 
