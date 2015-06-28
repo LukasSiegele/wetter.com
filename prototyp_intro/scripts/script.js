@@ -1,67 +1,5 @@
 $(document).ready(function()	{
 
-	       $(function(){
-            var sampleTags = ['schwäbisch gmünd', 'morgen', 'freitag', 'nächste woche', 'regen', 'wolken', 'wind', 'berlin'];
-
-        	
-
-
-            //-------------------------------
-            // Tag events
-            //-------------------------------
-            var eventTags = $('#eventTags');
-
-            var addEvent = function(text) {
-                $('#events_container').append(text + '<br>');
-            };
-
-            eventTags.tagit({
-                availableTags: sampleTags,
-                beforeTagAdded: function(evt, ui) {
-                    if (!ui.duringInitialization) {
-                        addEvent('beforeTagAdded: ' + eventTags.tagit('tagLabel', ui.tag));
-                    }
-                },
-                afterTagAdded: function(evt, ui) {
-                    if (!ui.duringInitialization) {
-                        addEvent('afterTagAdded: ' + eventTags.tagit('tagLabel', ui.tag));
-                    }
-                },
-                beforeTagRemoved: function(evt, ui) {
-                    addEvent('beforeTagRemoved: ' + eventTags.tagit('tagLabel', ui.tag));
-                },
-                afterTagRemoved: function(evt, ui) {
-                    addEvent('afterTagRemoved: ' + eventTags.tagit('tagLabel', ui.tag));
-                },
-                onTagClicked: function(evt, ui) {
-                    addEvent('onTagClicked: ' + eventTags.tagit('tagLabel', ui.tag));
-                },
-                onTagExists: function(evt, ui) {
-                    addEvent('onTagExists: ' + eventTags.tagit('tagLabel', ui.existingTag));
-                }
-            });
-
-
-            //-------------------------------
-            // Allow spaces without quotes.
-            //-------------------------------
-            $('#allowSpacesTags').tagit({
-               	 availableTags: sampleTags,
-                allowSpaces: true
-            });
-
-          
-
-           
-            //-------------------------------
-            // Remove confirmation
-            //-------------------------------
-            $('#removeConfirmationTags').tagit({
-                availableTags: sampleTags,
-                removeConfirmation: true
-            });
-            
-        });
 
 // Hier steht unser Code
 
@@ -74,14 +12,31 @@ $(".loc").addClass("active_tag1");
 
 $(".suche").keydown( function(e){
 
+	if(e.which == 83) {
+
 $(".ergebnisse").addClass("active_ergebnisse");
-$(".inner1").addClass("active_ergebnisse");	
+$(".buchstabeS").addClass("active_innerstate");
+
+
+}
+
+	if(e.which == 66) {
+
+$(".ergebnisse").addClass("active_ergebnisse");
+$(".buchstabeB").addClass("active_innerstate");
+
+
+}
 
 	if(e.which == 8) {
 
 		$(".ergebnisse").removeClass("active_ergebnisse");
-		$(".inner1").removeClass("active_ergebnisse");
+		$(".buchstabeS").removeClass("active_innerstate");
+		
+		$(".buchstabeB").removeClass("active_innerstate");
+		
 	}
+		
 
 });
 
@@ -249,6 +204,33 @@ $(".platzhalter").click(function(){
 		$(".guide").toggleClass("guide_off");
 });
 
+$(".inner1").hover(function(){
+
+		$(this).toggleClass("hover_inner1");
+
+		
+});
+
+$(".innerstate2").hover(function(){
+
+		$(this).toggleClass("hover_inner1");
+
+		
+});
+
+$(".innerstate3").hover(function(){
+
+		$(this).toggleClass("hover_inner1");
+
+		
+});
+
+$(".innerstate4").hover(function(){
+
+		$(this).toggleClass("hover_inner1");
+
+		
+});
 
 $(".scroll_container").scroll(function(){
 
@@ -259,6 +241,8 @@ $(".scroll_container").scroll(function(){
 
 		$(".container_aktuelles").addClass("move_aktuelles");
 });
+
+
 
 
 
@@ -364,7 +348,9 @@ $(".scroll_container").scroll(function(){
 		$(".karten").addClass("drei_tage");
 		$(".16").removeClass("active_tag1");
 		$(".beschreibung").addClass("versch_text");
-
+		$(".beschreibung_icon").addClass("versch_text");
+		$(".vorhersage_temperatur").addClass("versch_text");
+		$(".details").addClass("versch_text");
 
 
     }
@@ -375,12 +361,20 @@ $(".scroll_container").scroll(function(){
     	$(".1").addClass("active_tag1");
     	$(".loc").removeClass("active_tag1");
 		$(".karten").removeClass("drei_tage");
+		$(".beschreibung").removeClass("versch_text");
+		$(".beschreibung_icon").removeClass("versch_text");
+		$(".vorhersage_temperatur").removeClass("versch_text");
+		$(".details").removeClass("versch_text");
 
     }
 
        if(scrollPos >= 1200){
        	$(".3").removeClass("active_tag1");
        	$(".16").addClass("active_tag1");
+       	$(".beschreibung").removeClass("versch_text");
+		$(".beschreibung_icon").removeClass("versch_text");
+		$(".vorhersage_temperatur").removeClass("versch_text");
+		$(".details").removeClass("versch_text");
     	
 
    		
@@ -418,53 +412,21 @@ $(".scroll_container").scroll(function(){
 
 		var overlay;
         $(function(){
-            var sampleTags = ['schwäbisch gmünd', 'morgen', 'freitag', 'nächste woche', 'regen', 'wolken', 'wind', 'berlin'];
+            
 
         
 
             //-------------------------------
             // Tag events
             //-------------------------------
-            var eventTags = $('#eventTags');
-
-            var addEvent = function(text) {
-                $('#events_container').append(text + '<br>');
-            };
-
-            eventTags.tagit({
-                availableTags: sampleTags,
-                beforeTagAdded: function(evt, ui) {
-                    if (!ui.duringInitialization) {
-                        addEvent('beforeTagAdded: ' + eventTags.tagit('tagLabel', ui.tag));
-                    }
-                },
-                afterTagAdded: function(evt, ui) {
-                    if (!ui.duringInitialization) {
-                        addEvent('afterTagAdded: ' + eventTags.tagit('tagLabel', ui.tag));
-                    }
-                },
-                beforeTagRemoved: function(evt, ui) {
-                    addEvent('beforeTagRemoved: ' + eventTags.tagit('tagLabel', ui.tag));
-                },
-                afterTagRemoved: function(evt, ui) {
-                    addEvent('afterTagRemoved: ' + eventTags.tagit('tagLabel', ui.tag));
-                },
-                onTagClicked: function(evt, ui) {
-                    addEvent('onTagClicked: ' + eventTags.tagit('tagLabel', ui.tag));
-                },
-                onTagExists: function(evt, ui) {
-                    addEvent('onTagExists: ' + eventTags.tagit('tagLabel', ui.existingTag));
-                }
-                
-            });
-
+            
 
             //-------------------------------
             // Allow spaces without quotes.
             //-------------------------------
             $('#allowSpacesTags').tagit({
-                availableTags: sampleTags,
-                allowSpaces: true
+                
+               
             });
 
            
