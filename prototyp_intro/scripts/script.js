@@ -72,6 +72,8 @@ $(document).keypress( function(e){
 
 		$(".container_suche").toggleClass("active");
 		$(".favo").toggleClass("active_fav");
+		$(".suche").toggleClass("leiste_inactive");
+
 
 
 	}
