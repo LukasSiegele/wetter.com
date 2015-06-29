@@ -48,12 +48,13 @@ ul.tagit li.tagit-choice a.tagit-close .text-icon:hover {
     color: #222;
 }
 ul.tagit input[type="text"] {
-    color: #333333;
+    color: #737373;
     background: none;
+    font-family: DIN Round Pro;
 
 }
 .ui-widget {
-    font-size: 1.1em;
+    font-size: 1.9em;
 
 }
 

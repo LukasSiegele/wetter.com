@@ -61,7 +61,7 @@ body	{
 .profilpic:hover{
 	cursor:pointer;
 }
-
+ 
 .Name{
 	font-size: 13.5pt;
 	position: absolute;
@@ -299,28 +299,26 @@ body	{
 
 .ghost1{
 	position: absolute;
-	top:8px;
-	left:13px;
 	display: none;
 	opacity: 0.4;
-	font-size: 11pt;
+	font-size: 1.9em;
+	padding: 13px 5px 5px 61px;
 }
 
 .tag1{
 	position: absolute;
-	top:8px;
-	left:13px;
 	display: none;
-	font-size: 11pt;
+	opacity: 0.4;
+	font-size: 1.9em;
+	padding: 13px 5px 5px 61px;
 }
 
 .ghost2{
 	position: absolute;
-	top:8px;
-	left:13px;
 	display: none;
 	opacity: 0.4;
-	font-size: 11pt;
+	font-size: 1.9em;
+	padding: 13px 5px 5px 61px;
 }
 
 .buchstabeS{
@@ -331,13 +329,17 @@ body	{
 
 .inner1{
 	width:100%;
-	height:30px;
+	height:50px;
 	transition:all ease 0.5s;
+	padding: 13px 5px 5px 47px;
+	font-size: 1.9em;
 }
 .innerstate2{
 	width:100%;
-	height:30px;
+	height:50px;
 	transition:all ease 0.5s;
+	padding: 13px 5px 5px 47px;
+	font-size: 1.9em;
 }
 
 .buchstabeB{
@@ -348,14 +350,18 @@ body	{
 
 .innerstate3{
 	width:100%;
-	height:30px;
+	height:50px;
 	transition:all ease 0.5s;
+     padding: 13px 5px 5px 47px;
+     font-size: 1.9em;
 }
 
 .innerstate4{
 	width:100%;
-	height:30px;
+	height:50px;
 	transition:all ease 0.5s;
+	padding: 13px 5px 5px 47px;
+	font-size: 1.9em;
 }
 
 .hover_inner1{
@@ -376,7 +382,7 @@ body	{
 	background-color: #fff;
 	transition:all 2s;
 	border-radius: 5px 5px 0px 0px;
-	opacity: 0.9;
+	opacity: 0.8;
 }
 
 .suche:hover{
@@ -386,7 +392,7 @@ body	{
 
 .favo{
 	width:200px;
-     height:80px;
+     height:100px;
      /*background-color:#f2fffb;*/
 	float: left;	
 	transition:all 0.5s;
@@ -394,8 +400,9 @@ body	{
 
 .fav1{
      background-color: #fff;
-     opacity:0.8;
+     opacity:1;
      border-right: 1px solid rgba(0,0,0,0.1);
+     border-top: 1px solid rgba(0,0,0,0.1);
      float:left;
      font-size: 8pt;
      border-bottom-left-radius: 5px;
@@ -403,13 +410,15 @@ body	{
 
 .fav2{
 	background-color: #fff;
-	opacity:0.8;
+	opacity:1;
+	border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .fav3{
 	background-color: #fff;
-	opacity:0.8;
+	opacity:1;
 	border-left: 1px solid rgba(0,0,0,0.1);
+	border-top: 1px solid rgba(0,0,0,0.1);
 	border-bottom-right-radius: 5px;
 }
 
@@ -434,6 +443,7 @@ body	{
 .active{
 	margin-top: 0px;
 	top:0px;
+	border-radius: 0px;
 }
 
 .active_fav{
@@ -441,7 +451,7 @@ body	{
 }
 
 .hover_fav{
-	height:80px;
+	height:100px;
 }
 
 .active_suche{
@@ -905,4 +915,28 @@ b {
 
 .menu{
 
+}
+
+.suchicon {
+     left: 500px;
+     top: 8px;
+     height: 24px;
+     width: 27px;
+     display: block;
+  	background: url("../imgs/suche_icon.svg");
+  	background-size: 100% 100%;
+  	position: absolute;
+  	overflow: hidden;
+}
+
+.mylocation{
+     left:5px;
+     top: 8px;
+     height: 24px;
+     width: 27px;
+     display: block;
+  	background: url("../imgs/mylocation.svg");
+  	background-size: 100% 100%;
+  	position: absolute;
+  	overflow: hidden;
 }

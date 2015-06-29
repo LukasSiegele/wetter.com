@@ -1,5 +1,5 @@
 ul.tagit {
-    padding: 1px 5px;
+    padding: 1px 5px 1px 47px;
     overflow: auto;
     margin-left: inherit; /* usually we don't want the regular ul margins. */
     margin-right: inherit;
