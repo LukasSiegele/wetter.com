@@ -1,4 +1,4 @@
-$(document).ready(function()	{
+$(document).ready(function()  {
 
 
 // Hier steht unser Code
@@ -12,15 +12,15 @@ $(".loc").addClass("active_tag1");
 
 $(".suche").keydown( function(e){
 
-	if(e.which == 83) {
+  if(e.which == 83) {
 
 $(".ergebnisse").addClass("active_ergebnisse");
 $(".buchstabeS").addClass("active_innerstate");
-
+$(".andereV").addClass("active_innerstate");
 
 }
 
-	if(e.which == 66) {
+  if(e.which == 66) {
 
 $(".ergebnisse").addClass("active_ergebnisse");
 $(".buchstabeB").addClass("active_innerstate");
@@ -28,92 +28,99 @@ $(".buchstabeB").addClass("active_innerstate");
 
 }
 
-	if(e.which == 8) {
+  if(e.which == 8) {
 
-		$(".ergebnisse").removeClass("active_ergebnisse");
-		$(".buchstabeS").removeClass("active_innerstate");
-		
-		$(".buchstabeB").removeClass("active_innerstate");
-		
-	}
-		
+    $(".ergebnisse").removeClass("active_ergebnisse");
+    $(".buchstabeS").removeClass("active_innerstate");
+    
+    $(".buchstabeB").removeClass("active_innerstate");
+    $(".andereV").removeClass("active_innerstate");
+    $(".tag1").removeClass("active_innerstate");
+    
+  }
+    
 
 });
 
 
 $(document).keypress( function(e){
-	if(e.which == 13) {
+  if(e.which == 13) {
 
       event.preventDefault();
-   		$(this).toggleClass("active_suche");
-		$(".container_diagramm").toggleClass("active_dia");
-		$(".container_vohersage").toggleClass("active_vohersage");
-		$(".scroll_container").toggleClass("display_true");
-		$(".container_aktuelles").toggleClass("active_aktuelles");
-	}
+      $(this).toggleClass("active_suche");
+    $(".container_diagramm").toggleClass("active_dia");
+    $(".container_vohersage").toggleClass("active_vohersage");
+    $(".scroll_container").toggleClass("display_true");
+    $(".container_aktuelles").toggleClass("active_aktuelles");
+  }
 
-	});
+  });
 
 $(".suche").hover( function(){
 
-		$(".favo").toggleClass("hover_fav");
+    $(".favo").toggleClass("hover_fav");
 
 
 
-	});
+  });
 
 
 $(document).keypress( function(e){
 
 
-		if(e.which == 13) {
-		
+    if(e.which == 13) {
+    
       event.preventDefault();
+
 
 		$(".container_suche").toggleClass("active");
 		$(".favo").toggleClass("active_fav");
 		$(".suche").toggleClass("leiste_inactive");
 
 
+    $(".container_suche").toggleClass("active");
+    $(".favo").toggleClass("active_fav");
 
-	}
-	});
+
+
+  }
+  });
 
 
 
 /*$(".container_vohersage").click( function(){
 
-		
+    
 
 
 
-	});*/
+  });*/
 
 $(".profilpic").click( function(){
 
-		
+    
 
-		$(".profileinst").toggleClass("active_profil");
+    $(".profileinst").toggleClass("active_profil");
 
-		$(".trennleiste").removeClass("einstel_trenn");
+    $(".trennleiste").removeClass("einstel_trenn");
 
-		$(".profileinst").removeClass("einstel_konto");
-		$(".guide").removeClass("guide_off");
+    $(".profileinst").removeClass("einstel_konto");
+    $(".guide").removeClass("guide_off");
 
 
 
-	});
+  });
 
 $(window).load( function(){
 
-		setTimeout(function(){
-  		$(".container_tipps").addClass("showup");
-	}	, 2000);
+    setTimeout(function(){
+      $(".container_tipps").addClass("showup");
+  } , 2000);
 
 
-		setTimeout(function(){
-  		$(".container_tipps").removeClass("showup");
-	}	, 8000);
+    setTimeout(function(){
+      $(".container_tipps").removeClass("showup");
+  } , 8000);
 
 
 
@@ -126,73 +133,73 @@ var wi = $(window).width();
 
 $(window).resize(function(){
 
-	var wi = $(window).width();
+  var wi = $(window).width();
 
-	//REMOVE
-	if(wi <= 1000){
+  //REMOVE
+  if(wi <= 1000){
 
-		$(".karte7").addClass("remove_1000");
-		$(".karten").addClass("active_1000");
-
-
-	}
-	if(wi <= 900){
-
-		$(".karte6").addClass("remove_1000");
-		$(".karten").addClass("active_900");
-		
+    $(".karte7").addClass("remove_1000");
+    $(".karten").addClass("active_1000");
 
 
-	}
+  }
+  if(wi <= 900){
 
-	if(wi <= 700){
-
-		$(".karte5").addClass("remove_1000");
-		$(".karten").addClass("active_800");
-
-
-	}
-
-	if(wi <= 550){
-
-		$(".karte4").addClass("remove_1000");
-		$(".karten").addClass("active_700");
+    $(".karte6").addClass("remove_1000");
+    $(".karten").addClass("active_900");
+    
 
 
-	}
+  }
 
-	//ADD
-	if(wi >= 1000){
+  if(wi <= 700){
 
-		$(".karte7").removeClass("remove_1000");
-		$(".karten").removeClass("active_1000");
-
-
-	}
-	if(wi >= 900){
-
-		$(".karte6").removeClass("remove_1000");
-		$(".karten").removeClass("active_900");
+    $(".karte5").addClass("remove_1000");
+    $(".karten").addClass("active_800");
 
 
+  }
 
-	}
+  if(wi <= 550){
 
-	if(wi >= 700){
-
-		$(".karte5").removeClass("remove_1000");
-		$(".karten").removeClass("active_800");
-
-
-	}
-
-	if(wi >= 550){
-
-		$(".karte4").removeClass("remove_1000");
-		$(".karten").removeClass("active_700");
+    $(".karte4").addClass("remove_1000");
+    $(".karten").addClass("active_700");
 
 
-	}
+  }
+
+  //ADD
+  if(wi >= 1000){
+
+    $(".karte7").removeClass("remove_1000");
+    $(".karten").removeClass("active_1000");
+
+
+  }
+  if(wi >= 900){
+
+    $(".karte6").removeClass("remove_1000");
+    $(".karten").removeClass("active_900");
+
+
+
+  }
+
+  if(wi >= 700){
+
+    $(".karte5").removeClass("remove_1000");
+    $(".karten").removeClass("active_800");
+
+
+  }
+
+  if(wi >= 550){
+
+    $(".karte4").removeClass("remove_1000");
+    $(".karten").removeClass("active_700");
+
+
+  }
 
 
 
@@ -200,147 +207,173 @@ $(window).resize(function(){
 
 $(".platzhalter").click(function(){
 
-		$(".trennleiste").toggleClass("einstel_trenn");
+    $(".trennleiste").toggleClass("einstel_trenn");
 
-		$(".profileinst").toggleClass("einstel_konto");
-		$(".guide").toggleClass("guide_off");
+    $(".profileinst").toggleClass("einstel_konto");
+    $(".guide").toggleClass("guide_off");
+    $(".profil_detail").toggleClass("profil_detail_active");
+    
 });
 
 $(".inner1").click(function(){
 
-		$(".ergebnisse").removeClass("active_ergebnisse");
-		$(".buchstabeS").removeClass("active_innerstate");
-		
-		$(".buchstabeB").removeClass("active_innerstate");
-		
-		$(".tag1").toggleClass("active_innerstate");
-		var setted = 1;
+    $(".ergebnisse").removeClass("active_ergebnisse");
+    $(".buchstabeS").removeClass("active_innerstate");
+    
+    $(".buchstabeB").removeClass("active_innerstate");
+    $(".andereV").removeClass("active_innerstate");
+    $(".tag1").toggleClass("active_innerstate");
 
-	if(setted==1){
+    var setted = 1;
+
+  if(setted==1){
 
 
-		$("#allowSpacesTags").addClass("search_off");
+    $("#allowSpacesTags").addClass("search_off");
 
-	}
+  }
 
-		
+    
 });
 $("#allowSpacesTags").click(function(){
 
-		$(this).removeClass("search_off");
-	
+    $(this).removeClass("search_off");
 
-		
+  
+
+    
 });
+
+
 
 
 
 $(".inner1").hover(function(){
 
-		$(this).toggleClass("hover_inner1");
-		$(".ghost1").toggleClass("active_innerstate");
+    $(this).toggleClass("hover_inner1");
+    $(".ghost1").toggleClass("active_innerstate");
 
-		
+    
 });
 
 $(".innerstate2").hover(function(){
 
-		$(this).toggleClass("hover_inner1");
-		$(".ghost2").toggleClass("active_innerstate");
-		
+    $(this).toggleClass("hover_inner1");
+    $(".ghost2").toggleClass("active_innerstate");
+    
 });
 
 $(".innerstate3").hover(function(){
 
-		$(this).toggleClass("hover_inner1");
+    $(this).toggleClass("hover_inner1");
 
-		
+    
 });
 
 $(".innerstate4").hover(function(){
 
-		$(this).toggleClass("hover_inner1");
+    $(this).toggleClass("hover_inner1");
 
-		
+    
 });
 
+$(".innerstate5").hover(function(){
+
+    $(this).toggleClass("hover_inner1");
+     $(".ghost3").toggleClass("active_innerstate");
+
+    
+});
+$(".innerstate6").hover(function(){
+
+    $(this).toggleClass("hover_inner1");
+     $(".ghost4").toggleClass("active_innerstate");
+    
+});
+$(".innerstate7").hover(function(){
+
+    $(this).toggleClass("hover_inner1");
+     $(".ghost5").toggleClass("active_innerstate");
+
+    
+});
 $(".scroll_container").scroll(function(){
 
-		$(".container_vohersage").addClass("click_v");
-		$(".diagramm").addClass("click_v");
+    $(".container_vohersage").addClass("click_v");
+    $(".diagramm").addClass("click_v");
 
 
 
-		$(".container_aktuelles").addClass("move_aktuelles");
+    $(".container_aktuelles").addClass("move_aktuelles");
 });
 
 
 
 
 
-	// Vorhersage Scroll Events
+  // Vorhersage Scroll Events
 
-	var zustand = 0;
-	var timeoutID;
+  var zustand = 0;
+  var timeoutID;
    
     $(".scroll_container").on('scroll', { previousTop: 0 }, 
-    function () {
-    var currentTop = $(".scroll_container").scrollTop();
-    if (currentTop < this.previousTop && currentTop > 50) {
-       
-	console.log("hoch");
+    function () {
+    var currentTop = $(".scroll_container").scrollTop();
+    if (currentTop < this.previousTop && currentTop > 50) {
+       
+  console.log("hoch");
 
-    }
-
-
-	else{
-
-		console.log("runter");
+    }
 
 
-		//aktuell > 1tagesansicht
-		if(zustand == 0){
+  else{
+
+    console.log("runter");
 
 
-			var i = 1
+    //aktuell > 1tagesansicht
+    if(zustand == 0){
+
+
+      var i = 1
 !function(){
   console.log('ham')
 }
 
 
-			$(".1").removeClass("active_tag1");
-               $(".3").addClass("active_tag1");
-			$(".karten").addClass("drei_tage");
-			$(".16").removeClass("active_tag1");
-			
+      $(".1").removeClass("active_tag1");
+        $(".3").addClass("active_tag1");
+      $(".karten").addClass("drei_tage");
+      $(".16").removeClass("active_tag1");
+      
 
-			window.setTimeout(function() {
-    			zustand = 1;
-			   console.log("zustand1");
-			}, 500);
-		}
-
-
-		if(zustand == 1){
-			$(".3").removeClass("active_tag1");
-       		$(".16").addClass("active_tag1");
-			$(".karten").addClass("sechszehn_tage");
-			
-
-			window.setTimeout(function() {
-    			zustand = 2;
-			   console.log("zustand2");
-			}, 500);
-		}
+      window.setTimeout(function() {
+          zustand = 1;
+         console.log("zustand1");
+      }, 500);
+    }
 
 
+    if(zustand == 1){
+      $(".3").removeClass("active_tag1");
+          $(".16").addClass("active_tag1");
+      $(".karten").addClass("sechszehn_tage");
+      
+
+      window.setTimeout(function() {
+          zustand = 2;
+         console.log("zustand2");
+      }, 500);
+    }
 
 
 
-       // Scroll down
-    } 
-	this.previousTop = currentTop;
-	});
+
+
+       // Scroll down
+    } 
+  this.previousTop = currentTop;
+  });
 
 
 
@@ -354,70 +387,70 @@ $(".scroll_container").scroll(function(){
 
     if(scrollPos <= 10){
 
-    	$(".container_vohersage").removeClass("click_v");
-    	$(".diagramm").removeClass("click_v");
+      $(".container_vohersage").removeClass("click_v");
+      $(".diagramm").removeClass("click_v");
 
-		$(".background").removeClass("fadeout");
+    $(".background").removeClass("fadeout");
 
-		$(".loc").addClass("active_tag1");
-		$(".1").removeClass("active_tag1");
+    $(".loc").addClass("active_tag1");
+    $(".1").removeClass("active_tag1");
 
-		$(".container_aktuelles").removeClass("move_aktuelles");
+    $(".container_aktuelles").removeClass("move_aktuelles");
 
 
 
     }
 
  
-	 
+   
 
     if(scrollPos >= 800 ){
 
-    	
+      
 
-   		$(".1").removeClass("active_tag1");
-    	$(".3").addClass("active_tag1");
-		$(".karten").addClass("drei_tage");
-		$(".16").removeClass("active_tag1");
-		$(".beschreibung").addClass("versch_text");
-		$(".beschreibung_icon").addClass("versch_text");
-		$(".vorhersage_temperatur").addClass("versch_text");
-		$(".details").addClass("versch_text");
+      $(".1").removeClass("active_tag1");
+      $(".3").addClass("active_tag1");
+    $(".karten").addClass("drei_tage");
+    $(".16").removeClass("active_tag1");
+    $(".beschreibung").addClass("versch_text");
+    $(".beschreibung_icon").addClass("versch_text");
+    $(".vorhersage_temperatur").addClass("versch_text");
+    $(".details").addClass("versch_text");
 
 
     }
 
     if(scrollPos <= 800 && scrollPos >= 3){
 
-    	$(".3").removeClass("active_tag1");
-    	$(".1").addClass("active_tag1");
-    	$(".loc").removeClass("active_tag1");
-		$(".karten").removeClass("drei_tage");
-		$(".beschreibung").removeClass("versch_text");
-		$(".beschreibung_icon").removeClass("versch_text");
-		$(".vorhersage_temperatur").removeClass("versch_text");
-		$(".details").removeClass("versch_text");
+      $(".3").removeClass("active_tag1");
+      $(".1").addClass("active_tag1");
+      $(".loc").removeClass("active_tag1");
+    $(".karten").removeClass("drei_tage");
+    $(".beschreibung").removeClass("versch_text");
+    $(".beschreibung_icon").removeClass("versch_text");
+    $(".vorhersage_temperatur").removeClass("versch_text");
+    $(".details").removeClass("versch_text");
 
     }
 
        if(scrollPos >= 1200){
-       	$(".3").removeClass("active_tag1");
-       	$(".16").addClass("active_tag1");
-       	$(".beschreibung").removeClass("versch_text");
-		$(".beschreibung_icon").removeClass("versch_text");
-		$(".vorhersage_temperatur").removeClass("versch_text");
-		$(".details").removeClass("versch_text");
-    	
+        $(".3").removeClass("active_tag1");
+        $(".16").addClass("active_tag1");
+        $(".beschreibung").removeClass("versch_text");
+    $(".beschreibung_icon").removeClass("versch_text");
+    $(".vorhersage_temperatur").removeClass("versch_text");
+    $(".details").removeClass("versch_text");
+      
 
-   		
-    	
-    	
+      
+      
+      
 
-		$(".karten").addClass("sechszehn_tage");
+    $(".karten").addClass("sechszehn_tage");
 
 
-		
-	
+    
+  
 
 
 
@@ -425,9 +458,9 @@ $(".scroll_container").scroll(function(){
 
     if(scrollPos <= 1200){
 
-    	
+      
 
-		$(".karten").removeClass("sechszehn_tage");
+    $(".karten").removeClass("sechszehn_tage");
 
     }
 
@@ -440,9 +473,9 @@ $(".scroll_container").scroll(function(){
 });
 
 
-		// ------------AUTOCOMPLETE-------------------------------------------------
+    // ------------AUTOCOMPLETE-------------------------------------------------
 
-		var overlay;
+    var overlay;
         $(function(){
             
 
@@ -735,7 +768,6 @@ USGSOverlay.prototype.onRemove = function() {
 
 
 google.maps.event.addDomListener(window, 'load', initialize);
-
 
 
 
