@@ -6,7 +6,7 @@ body	{
 
 	background-color:#000;
 	font-family: Din Round Pro, Helvetica, Arial, sans-serif;
-	color: #000000;
+	color: #737373;
 	font-weight: 400;
 	font-size: 20px;
 	
@@ -91,7 +91,7 @@ body	{
 }
 .profileinst{
 	width:300px;
-	height:320px;
+	height:350px;
 	background-color:#fafafa;
 	position: absolute;
 	right:calc(50% - 600px);
@@ -132,7 +132,11 @@ body	{
 
 .guide{
      width:100%;
-     height:115px;
+     height:145px;
+}
+
+.aktivitäten {
+     padding: 4px;
 }
 
 
@@ -146,8 +150,8 @@ body	{
 
 .bars{
      position: absolute;
-     top:115px;
-     left:130px;
+     top:102px;
+     left:120px;
      float: left;
      width: 100%;
 }
@@ -156,26 +160,27 @@ body	{
 	float:left;
 	background-color: #e8e8e8;
 	width:100px;
-	height:10px;
+	height:12px;
 	border-radius: 3px;
+	top: 10px;
 }
 
 .inner{
 	width:30%;
-	background-color: #fce544;
+	background-color: #fbde16;
 }
 
 .inner2{
-	width:70%;
-	background-color: #79bbf2;
+	width:80%;
+	background-color: #50a6f2;
 }
 .inner3{
-	width:80%;
-	background-color: #79bbf2;
+	width:50%;
+	background-color: #50a6f2;
 }
 .inner4{
 	width:0%;
-	background-color: #79bbf2;
+	background-color: #50a6f2;
 }
 
 .trennleiste{
@@ -210,13 +215,15 @@ body	{
 	border-radius:50%;
 	background-color: #000;
 	float: left;
+	margin: 4px;
 }
 
 .daten{
 	font-size: 8pt;
 	line-height: 1.8em;
 	position: absolute;
-	left: 75px;
+	left: 80px;
+	margin-top: 10px;
 }
 
 .einstel_konto{
@@ -282,7 +289,7 @@ body	{
 }
 
 .showup{
-     margin-right:380px;
+     margin-right:calc(2% + 320px);
 }
 
 .active_profil{
