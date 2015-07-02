@@ -70,6 +70,7 @@ $(document).keypress( function(e){
     $(".fav_icon").toggleClass("fav_off");
 
      $(".hover_cont").toggleClass("hover_cont_on");
+     $(".suche").toggleClass("suche_nav");
 
 
 
