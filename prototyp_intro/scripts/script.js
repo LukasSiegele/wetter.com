@@ -8,8 +8,8 @@ var wi = $(window).width();
 console.log(wi);
 
 
-
-
+$(".locicon_active").addClass("active_vis");
+$(".locicon").addClass("inactive_vis");
 
 
 $(".mylocation").click( function(){
@@ -394,14 +394,16 @@ $(".scroll_container").scroll(function(){
     //console.log(scrollPos);
 
     if(scrollPos <= 10){
-
-      $(".container_vohersage").removeClass("click_v");
       $(".diagramm").removeClass("click_v");
+      $(".container_vohersage").removeClass("click_v");
+
 
     $(".background").removeClass("fadeout");
-
-    $(".loc").addClass("active_tag1");
-    $(".1").removeClass("active_tag1");
+    
+    $(".locicon").addClass("inactive_vis");
+    $(".tag1icon").removeClass("inactive_vis");
+    $(".locicon_active").addClass("active_vis");
+    $(".tag1icon_active").removeClass("active_vis");
 
     $(".container_aktuelles").removeClass("move_aktuelles");
 
@@ -415,9 +417,12 @@ $(".scroll_container").scroll(function(){
     if(scrollPos >= 800 ){
 
       
-
-      $(".1").removeClass("active_tag1");
-      $(".3").addClass("active_tag1");
+    $(".tag1icon").addClass("inactive_vis");
+    $(".locicon").removeClass("inactive_vis");
+    $(".tag1icon_active").addClass("active_vis");
+    $(".locicon_active").removeClass("active_vis");
+    $(".3tageicon_active").removeClass("active_vis");
+    
     $(".karten").addClass("drei_tage");
     $(".16").removeClass("active_tag1");
     $(".beschreibung").addClass("versch_text");
@@ -817,7 +822,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
-
+function aktuell() {
+     
+}
 
 
 
