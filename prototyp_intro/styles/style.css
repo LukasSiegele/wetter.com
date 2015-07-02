@@ -78,7 +78,9 @@ height:250px;
 	background-color:#191919;
 	position: absolute;
 	right:8%;
-	top:4px;
+	top:10px;
+
+	z-index: 99;
 
 }
 
@@ -89,8 +91,10 @@ height:250px;
 .Name{
 	font-size: 10pt;
 	position: absolute;
-	left:85%;
-	top:6px;
+	left:82%;
+	top:12px;
+
+	z-index: 99;
 }
 .profileinst{
 	width:300px;
@@ -102,6 +106,8 @@ height:250px;
 	transition: all 0.5s ease;
 	font-size: 9pt;
 	float:left;
+
+
 }
 
 
@@ -311,7 +317,7 @@ height:250px;
      z-index: 9;
      font-size: 10pt;
      border-radius: 5px;
-     box-shadow: 0px 10px 31px #6a6a6a;
+     /*box-shadow: 0px 10px 31px #6a6a6a;*/
 }
 
 .ergebnisse{
@@ -331,14 +337,7 @@ background-color:rgba(0,0,0,0.1);
 
 }
 
-.ghost1{
-	position: absolute;
-	display: none;
-	opacity: 0.4;
-	font-size: 1.9em;
-	padding: 13px 5px 5px 61px;
 
-}
 
 
 .ghosts{
@@ -346,15 +345,11 @@ background-color:rgba(0,0,0,0.1);
 				
 
 		
-
-		position: absolute;
-		top:9px;
-		left:13px;
-		display: none;
-
-		opacity: 0.4;
-
-		font-size: 11pt;
+position: absolute;
+	display: none;
+	opacity: 0.4;
+	font-size: 1.9em;
+	padding: 13px 5px 5px 61px;
 
 
 
@@ -367,36 +362,10 @@ background-color:rgba(0,0,0,0.1);
 	display: none;
 	opacity: 0.4;
 	font-size: 1.9em;
-	padding: 13px 5px 5px 47px;
+	padding: 12px 4px 5px 47px;
 }
 
-.ghost2{
-	position: absolute;
-	display: none;
-	opacity: 0.4;
-	font-size: 1.9em;
-	padding: 13px 5px 5px 61px;
-}
 
-.ghost2{
-
-				
-
-		
-
-		position: absolute;
-		top:9px;
-		left:13px;
-		display: none;
-
-		opacity: 0.4;
-
-		font-size: 11pt;
-
-
-
-
-}
 
 .buchstabeS{
 
@@ -425,14 +394,20 @@ margin-left: 50px;
 
 #t3{
 
-margin-left: 161px;
+margin-left: 220px;
 
 
 }
 
 #t4{
 
-margin-left: 163px;
+margin-left: 200px;
+
+
+}
+#t5{
+
+margin-left: 225px;
 
 
 }
@@ -448,6 +423,13 @@ margin-left: 163px;
 	transition:all ease 0.5s;
 	padding: 13px 5px 5px 47px;
 	font-size: 1.9em;
+
+
+}
+
+.move_tag{
+
+margin-left: 50px;
 
 
 }
@@ -506,9 +488,11 @@ display:none;
 .andereV{
 
 width: 100%;
-height:90px;
-
 display:none;
+
+	transition:all ease 0.5s;
+	
+	font-size: 1.9em;
 
 
 
@@ -519,30 +503,31 @@ display:none;
 
 	
 	width:100%;
-	height:30px;
+	height:50px;
 	
 	transition:all ease 0.5s;
-	padding-left: 10px;
+	padding: 13px 5px 5px 47px;
 }
 
 .innerstate6{
 
 	
 	width:100%;
-	height:30px;
+	height:50px;
 	
 	transition:all ease 0.5s;
-	padding-left: 10px;
+	padding: 13px 5px 5px 47px;
+
 }
 
 .innerstate7{
 
 	
 	width:100%;
-	height:30px;
+	height:50px;
 	
 	transition:all ease 0.5s;
-	padding-left: 10px;
+	padding: 13px 5px 5px 47px;
 }
 .hover_inner1{
 
@@ -555,7 +540,7 @@ background-color: #ecf1f0;
 .active_ergebnisse{
 
 
-height:150px;
+height:250px;
 
 
 
@@ -566,6 +551,29 @@ height:150px;
 display: inline;
 
 
+
+}
+
+.hover_cont{
+
+
+position: absolute;
+top:50px;
+
+width:100%;
+height: 100px;
+
+
+
+display: none;
+
+z-index: 99;
+}
+
+.hover_cont_on{
+
+
+display: block;
 
 }
 
@@ -581,6 +589,27 @@ display: inline;
 .suche:hover{
      background-color: #e6e6e6;
 	cursor: pointer;
+}
+
+.inhalt_fav{
+width: 100%;
+height:50px;
+float: left;
+opacity: 0.4;
+text-align: left;
+
+margin-top:-60px;
+padding-left: 70px;
+font-size: 0.9em;
+
+transition:all 0.5s ease;
+}
+
+.fav_off{
+
+opacity: 0;
+
+
 }
 
 .favo{
@@ -627,7 +656,7 @@ display: inline;
 	opacity: 0.9;
 
 	z-index: 8;
-  	background: url("../imgs/navi2.svg");
+  	background: url("../imgs/navi3.svg");
   	background-size: 100% 100%;
   	position: absolute;
   	overflow: hidden;
@@ -696,23 +725,54 @@ display: inline;
 }
 
 .container_vohersage{
-	width:calc(100% + 2000px);
+	width:calc(100% + 5000px);
 	position: fixed;
 	bottom:-550px;
      left:0px;
 	transition: all 0.6s ease;
 	overflow:scroll;
+
+	background-color: rgba(255,255,255,0.8);
 }
 
 .karten{
-	width:10.5%;
+	width:5.1%;
 	height:550px;
-	background-color: rgba(255,255,255,0.65);
+	
 	border-right: 1px solid rgba(0,0,0,0.1);
 	float:left;
-	transition:all 600ms cubic-bezier(0.86, 0, 0.07, 1) ;
+	transition:all 1s;
 	padding-top: 26px;
-	transition:all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+	
+}
+
+.move_card{
+
+
+
+
+margin-left:-380px;
+
+
+
+}
+.off_card{
+
+
+opacity: 0;
+
+
+
+}
+
+.opacity_card{
+
+
+
+display: inline;
+
+
+
 }
 
 .little_card{
@@ -720,11 +780,11 @@ display: inline;
 }
 
 .drei_tage{
-     width:12%;
+     width:6%;
 }
 
 .sechszehn_tage{
-     width:6.3%;
+     width:3.1%;
 }
 
 .active_vohersage{
@@ -776,6 +836,8 @@ display: inline;
 
 }
 
+
+
 .beschreibung{
      padding-left: 60px;
      width:100%;
@@ -783,6 +845,7 @@ display: inline;
      transition:all 0.5s ease;
      text-align: left;
 }
+
 
 .beschreibung_icon{
      width:100%;
@@ -837,16 +900,20 @@ display: inline;
      padding-left:100px;
 }
 
+
+
 .fav_icon{
 	margin-left: 10px;
 	margin-top: 10px;
+
+	transition:all 0.5s ease;
 }
 
 .baric{
 	width:30px;
 	height:30px;
 	border-radius: 20px;
-	border:1px solid #fff;
+	border:2px solid #fff;
 	float:left;
 	margin: 5px;
 	color:#fff;
@@ -917,7 +984,7 @@ display: inline;
 
 #map-canvas{
      overflow: hidden;
-}
+  }
 
 
 
@@ -942,8 +1009,8 @@ opacity: 0;
 }
 
 .suchicon {
-     left: 500px;
-     top: 8px;
+     left: 550px;
+     top: 12px;
      height: 24px;
      width: 27px;
      display: block;
@@ -954,12 +1021,12 @@ opacity: 0;
 }
 
 .mylocation{
-     left:5px;
-     top: 8px;
-     height: 24px;
-     width: 27px;
+     left:7px;
+     top: 17px;
+     height: 15px;
+     width: 15px;
      display: block;
-  	background: url("../imgs/mylocation.svg");
+  	background: url("../imgs/myloc.png");
   	background-size: 100% 100%;
   	position: absolute;
   	overflow: hidden;

@@ -7,7 +7,17 @@ $(document).ready(function()  {
 var wi = $(window).width();  
 console.log(wi);
 
-$(".loc").addClass("active_tag1");
+
+
+
+
+
+$(".mylocation").click( function(){
+
+$(".tag1").toggleClass("active_innerstate");
+
+
+});
 
 
 $(".suche").keydown( function(e){
@@ -17,6 +27,7 @@ $(".suche").keydown( function(e){
 $(".ergebnisse").addClass("active_ergebnisse");
 $(".buchstabeS").addClass("active_innerstate");
 $(".andereV").addClass("active_innerstate");
+
 
 }
 
@@ -44,6 +55,7 @@ $(".buchstabeB").addClass("active_innerstate");
 
 
 $(document).keypress( function(e){
+
   if(e.which == 13) {
 
       event.preventDefault();
@@ -52,39 +64,35 @@ $(document).keypress( function(e){
     $(".container_vohersage").toggleClass("active_vohersage");
     $(".scroll_container").toggleClass("display_true");
     $(".container_aktuelles").toggleClass("active_aktuelles");
-  }
-
-  });
-
-$(".suche").hover( function(){
-
-    $(".favo").toggleClass("hover_fav");
-
-
-
-  });
-
-
-$(document).keypress( function(e){
-
-
-    if(e.which == 13) {
-    
-      event.preventDefault();
-
-
-		$(".container_suche").toggleClass("active");
-		$(".favo").toggleClass("active_fav");
-		$(".suche").toggleClass("leiste_inactive");
-
-
     $(".container_suche").toggleClass("active");
     $(".favo").toggleClass("active_fav");
+    $(".inhalt_fav").toggleClass("fav_off");
+    $(".fav_icon").toggleClass("fav_off");
+
+     $(".hover_cont").toggleClass("hover_cont_on");
 
 
 
   }
+
+
+
+
   });
+
+
+ $(".hover_cont").hover( function(){
+
+
+
+    $(".favo").toggleClass("hover_fav");
+    $(".inhalt_fav").toggleClass("fav_off");
+    $(".fav_icon").toggleClass("fav_off");
+
+
+  });
+
+
 
 
 
@@ -416,6 +424,26 @@ $(".scroll_container").scroll(function(){
     $(".beschreibung_icon").addClass("versch_text");
     $(".vorhersage_temperatur").addClass("versch_text");
     $(".details").addClass("versch_text");
+window.setTimeout(function() {
+       $(".karte2").addClass("move_card");
+
+       $(".karte3").addClass("move_card");
+
+       $(".karte4").addClass("move_card");
+  }, 50);
+
+      
+          
+         
+    
+
+       $(".karte2").addClass("off_card");
+
+       $(".karte3").addClass("off_card");
+
+       $(".karte4").addClass("off_card");
+
+
 
 
     }
@@ -431,6 +459,24 @@ $(".scroll_container").scroll(function(){
     $(".vorhersage_temperatur").removeClass("versch_text");
     $(".details").removeClass("versch_text");
 
+
+       $(".karte2").removeClass("move_card");
+
+       $(".karte3").removeClass("move_card");
+
+       $(".karte4").removeClass("move_card");
+
+
+
+      window.setTimeout(function() {
+       $(".karte2").removeClass("off_card");
+
+       $(".karte3").removeClass("off_card");
+
+       $(".karte4").removeClass("off_card");
+
+
+         }, 50);
     }
 
        if(scrollPos >= 1200){
