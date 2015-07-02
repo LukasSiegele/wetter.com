@@ -319,75 +319,6 @@ $(".scroll_container").scroll(function(){
 
 
 
-  // Vorhersage Scroll Events
-
-  var zustand = 0;
-  var timeoutID;
-   
-    $(".scroll_container").on('scroll', { previousTop: 0 }, 
-    function () {
-    var currentTop = $(".scroll_container").scrollTop();
-    if (currentTop < this.previousTop && currentTop > 50) {
-       
-  console.log("hoch");
-
-    }
-
-
-  else{
-
-    console.log("runter");
-
-
-    //aktuell > 1tagesansicht
-    if(zustand == 0){
-
-
-      var i = 1
-!function(){
-  console.log('ham')
-}
-
-
-      $(".1").removeClass("active_tag1");
-        $(".3").addClass("active_tag1");
-      $(".karten").addClass("drei_tage");
-      $(".16").removeClass("active_tag1");
-      
-
-      window.setTimeout(function() {
-          zustand = 1;
-         console.log("zustand1");
-      }, 500);
-    }
-
-
-    if(zustand == 1){
-      $(".3").removeClass("active_tag1");
-          $(".16").addClass("active_tag1");
-      $(".karten").addClass("sechszehn_tage");
-      
-
-      window.setTimeout(function() {
-          zustand = 2;
-         console.log("zustand2");
-      }, 500);
-    }
-
-
-
-
-
-       // Scroll down
-    } 
-  this.previousTop = currentTop;
-  });
-
-
-
-
-
-
 $(".scroll_container").scroll(function(){
     var scrollPos = $(".scroll_container").scrollTop();
     
@@ -400,10 +331,14 @@ $(".scroll_container").scroll(function(){
 
     $(".background").removeClass("fadeout");
     
-    $(".locicon").addClass("inactive_vis");
-    $(".tag1icon").removeClass("inactive_vis");
-    $(".locicon_active").addClass("active_vis");
-    $(".tag1icon_active").removeClass("active_vis");
+    
+    
+    $(".tag1icon").addClass("inactive_vis");
+    $(".locicon").removeClass("inactive_vis");
+    $(".tage3icon").removeClass("inactive_vis");
+    $(".tag1icon_active").addClass("active_vis");
+    $(".locicon_active").removeClass("active_vis");
+    $(".tage3icon_active").removeClass("active_vis");
 
     $(".container_aktuelles").removeClass("move_aktuelles");
 
@@ -417,11 +352,13 @@ $(".scroll_container").scroll(function(){
     if(scrollPos >= 800 ){
 
       
-    $(".tag1icon").addClass("inactive_vis");
-    $(".locicon").removeClass("inactive_vis");
-    $(".tag1icon_active").addClass("active_vis");
-    $(".locicon_active").removeClass("active_vis");
-    $(".3tageicon_active").removeClass("active_vis");
+    $(".tage3icon").addClass("inactive_vis");
+    $(".tag1icon").removeClass("inactive_vis");
+    $(".tage16icon").removeClass("inactive_vis");
+    
+    $(".tage3icon_active").addClass("active_vis");
+    $(".tag1icon_active").removeClass("active_vis");
+    $(".tage16icon_active").removeClass("active_vis");
     
     $(".karten").addClass("drei_tage");
     $(".16").removeClass("active_tag1");
