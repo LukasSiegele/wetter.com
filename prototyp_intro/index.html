@@ -6,7 +6,7 @@
 		<!-------------------------<!--! META ------------------------------>
 		<title>wetter.com</title>
 		<meta charset="utf-8"> 
-		<link rel="shortcut icon" href="imgs/assets/icons/favicon.ico">
+		<link rel="shortcut icon" href="imgs/favicon.ico">
 
 	
 		<!-------------------------<!--! STYLES ------------------------------>
@@ -90,8 +90,8 @@
 
 		</div>
 
-		<div class="profilpic"><img src="profilpic.png" width="30px"  height="30px"></div>
-		<div class="Name">Kim Jong Un</div>
+		<div class="profilpic"></div>
+		<div class="Name">Dominik</div>
 		<div class="profileinst">
 
 
@@ -100,19 +100,20 @@
 		<div class="tipp1_profil">
 
 				<div class="logo1_profil"><img src="icon_schirm.png" width="30px"  height="30px"></div>
-				
+				<div class="tipp1_text_nav">				
 				&nbsp;&nbsp;Gegen <b>17Uhr</b> wird es in <b>Schwäbisch Gmünd</b> 
 				&nbsp;&nbsp;einen kurzen <b>Regenschauer</b> geben.
 				</div>
+				</div>
 	<div class="guide">
 		<div class="bars_bez">
-		<p>Pollen</p> 
+		<p class="aktivitäten">Pollen</p> 
 		
-		<p>Joggen</p> 
+		<p class="aktivitäten">Joggen</p> 
 		
-		<p>Schwimmen</p> 
+		<p class="aktivitäten">Schwimmen</p> 
 		
-		<p>Snowboarden</p> 
+		<p class="aktivitäten">Snowboarden</p> 
 		</div>
 
 		<div class="bars">
@@ -139,10 +140,9 @@
 		</div>
 
 	<div class="konto_klein">
-		<div class="profilbild_big"><img src="profilpic.png" width="50px"  height="50px"></div>
+		<div class="profilbild_big"></div>
 
 		<div class="daten">
-
 				
 			<p>Name: <b>Dominik Merle</b></p>
 			<p>E-mail: <b>dominik.merle@hfg-gmuend.de</b></p>
@@ -284,30 +284,28 @@
 				
 				
 				
-					<img class="fav_icon" src="imgs/assets/icons/schauer3.svg" alt="wettericon" title="schauer_icon" width="30%">
+					<img class="fav_icon" src="imgs/wetter_icon_teilweisebew.svg" alt="wettericon" title="schauer_icon" width="30%">
 
 				<div class="inhalt_fav inhalt1">
-					<font size="+3"><p>34°</p></font>
-					<font size="-1">Reutlingen</font>
+					<font class="fav_temp"><p>20°</p></font>
+					<font size="-0.5">Reutlingen</font>
 			
 				</div>
 			</div>
 			<div class="favo fav2">
-				<img class="fav_icon" src="imgs/assets/icons/schauer3.svg" alt="wettericon" title="schauer_icon" width="30%">
+				<img class="fav_icon" src="imgs/wetter_icon_gewitter.svg" alt="wettericon" title="schauer_icon" width="25%">
 					<div class="inhalt_fav inhalt2">
-					<font size="+3"><p>30°</p></font>
-					Ulm
-			
+					<font class="fav_temp"><p>18°</p></font>
+					<font size="-0.5">Ulm</font>
 				</div>
 			</div>
 			<div class="favo fav3">
 				
-			<img class="fav_icon" src="imgs/assets/icons/schauer3.svg" alt="wettericon" title="schauer_icon" width="30%">
+			<img class="fav_icon" src="imgs/wetter_icon_sonne.svg" alt="wettericon" title="schauer_icon" width="25%">
 				<div class="inhalt_fav inhalt3">
 
-					<font size="+3"><p>33°</p></font>
-					Schwäbisch Gmünd
-			
+					<font class="fav_temp"><p>23°</p></font>
+                         <font size="-0.5">Berlin</font>
 				</div>
 			</div>
 
@@ -317,21 +315,15 @@
 
 <div class="diagramm"></div>
 
-
-
-
 <div class="container_diagramm">
 
-	
-
-	
 	<div class="bar">
 		<div class="container_baric">
 
-			<div class="baric regen"><img src="icon_regen.png" width="7px"  height="12px"></div>
-			<div class="baric unwetter"><img src="icon_witter.png" width="7px"  height="12px"></div>
-			<div class="baric pollen"><img src="icon_pollen.png" width="12px"  height="12px"></div>
-			<div class="baric wolken"><img src="icon_wolke.png" width="14px"  height="11px"></div>
+			<div class="baric regen"></div>
+			<div class="baric unwetter"></div>
+			<div class="baric pollen"></div>
+			<div class="baric wolken"></div>
 
 		</div>
 
@@ -340,35 +332,23 @@
 
 		<div class="container_teilung">
 			
-			<div class="baric loc"></div>
-			<div class="baric 1"></div>
-			<div class="baric 3"></div>
-			<div class="baric 16"></div>
-			<div class="baric we"></div>
-
+			<div class="baric locicon"></div>
+			<div class="baric tag1icon"></div>
+			<div class="baric tage3icon"></div>
+			<div class="baric tage16icon"></div>
+			<div class="baric weicon"></div>
+               <div class="baric locicon_active"></div>
+			<div class="baric tag1icon_active"></div>
+			<div class="baric tage3icon_active"></div>
+			<div class="baric tage16icon_active"></div>
+			<div class="baric weicon_active"></div>
 
 		</div>
-		
-
-
-
-
-
 	</div>
-
-
-
 </div>
-
-
-
-          
-                    
-               </div>
+   
+     </div>
           </div>
-
-         
-
           <div class="container_vohersage">
           	<div class="karten karte1">
 
@@ -379,7 +359,7 @@
           		</div>
           				
           		<div class="icon_holder">
-               		<img class="vorhersage_icon" src="imgs/assets/icons/wolkig3.svg" alt="wettericon" title="schauer_icon" width="80%" height="80%">
+               		<img class="vorhersage_icon" src="imgs/wetter_icon_wolkig.svg" alt="wettericon" title="schauer_icon" width="90%" height="90%">
           			<p class = "fav1_typox"></p>
           		</div>
           
@@ -405,7 +385,7 @@
           		</div>
           				
           		<div class="icon_holder">
-                         <img class="vorhersage_icon" src="imgs/assets/icons/leichtwolkig3.svg" alt="wettericon" title="schauer_icon" width="90%" height="90%">
+                         <img class="vorhersage_icon" src="imgs/wetter_icon_teilweisebew.svg" alt="wettericon" title="schauer_icon" width="90%" height="90%">
                          <p class = "fav1_typox"></p>
           		</div>
           
@@ -432,7 +412,7 @@
           		</div>
           				
           		<div class="icon_holder">
-          				<img class="vorhersage_icon" src="imgs/assets/icons/sonnig3.svg" alt="wettericon" title="schauer_icon" width="90%" height="90%">
+          				<img class="vorhersage_icon" src="imgs/wetter_icon_sonne.svg" alt="wettericon" title="schauer_icon" width="90%" height="90%">
           				<p class = "fav1_typox"></p>
           		</div>
           
@@ -459,7 +439,7 @@
                     </div>
                				
                     <div class="icon_holder">
-                         <img class="vorhersage_icon" src="imgs/assets/icons/sonnig3.svg" alt="wettericon" title="schauer_icon" width="90%" height="90%">
+                         <img class="vorhersage_icon" src="imgs/wetter_icon_nacht_regen.svg" alt="wettericon" title="schauer_icon" width="90%" height="90%">
                          <p class = "fav1_typox"></p>
                     </div>
                

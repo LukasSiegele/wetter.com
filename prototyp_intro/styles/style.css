@@ -6,7 +6,7 @@ body	{
 
 	background-color:#000;
 	font-family: Din Round Pro, Helvetica, Arial, sans-serif;
-	color: #000000;
+	color: #737373;
 	font-weight: 400;
 	font-size: 20px;
 	
@@ -28,12 +28,10 @@ body	{
   and (min-resolution: 192dpi) { 
 }
 
-
-
 .container_aktuelles{
      position: absolute;
-     top:70px;
-     left:40px;
+     top:100px;
+     left:calc(50% - 620px);
      opacity: 0;
      z-index: 1;
      transition:all 0.5s ease;
@@ -47,38 +45,25 @@ body	{
      opacity: 1;
 }
 
-
 .profil_detail{
-
-
-
-
-width: 100%;
-height:0px;
-
-
-
-
+     width: 100%;
+     height:0px;
 }
 
 .profil_detail_active{
-
-
-height:250px;
-
-
-
-
+     height:250px;
 }
 
 .profilpic{
-     width:30px;
-	height:30px;
+     width:34px;
+	height:34px;
 	border-radius: 50%;
 	background-color:#191919;
 	position: absolute;
-	right:8%;
-	top:10px;
+	right:calc(50% - 593px);
+	top:8px;
+	background: url("../imgs/profilpic.png");
+  	background-size: 100% 100%;
 
 	z-index: 99;
 
@@ -87,37 +72,49 @@ height:250px;
 .profilpic:hover{
 	cursor:pointer;
 }
+
+.profilbild_big {
+     width: 50px;
+     height: 50px;
+     background: url("../imgs/profilpic.png");
+  	background-size: 100% 100%;
+}
  
 .Name{
-	font-size: 10pt;
+	font-size: 12pt;
 	position: absolute;
-	left:82%;
+	right:calc(50% - 543px);
 	top:12px;
+	color: #737373;
 
 	z-index: 99;
 }
 .profileinst{
 	width:300px;
-	height:270px;
+	height:350px;
 	background-color:#fafafa;
 	position: absolute;
-	right:60px;
-	top:-300px;
+	right:calc(50% - 600px);
+	top:-330px;
 	transition: all 0.5s ease;
 	font-size: 9pt;
 	float:left;
-
+	z-index: 98;
+     box-shadow: 0px 1px 8px #6a6a6a;
+     opacity: 0;
 
 }
 
 
 .tipp1_profil{
-     height:50px;
+     margin-top: 50px;
+     height:52px;
      width:100%;
      font-size: 9pt;
      line-height: 1.6em;
      background-color: #fff;
      border-bottom: 1px solid rgba(0,0,0,0.1);
+     border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .logo1_profil{
@@ -129,15 +126,23 @@ height:250px;
 	padding:10px;
 }
 
+.tipp1_text_nav {
+     padding-top: 5px;
+}
+
 .guide{
      width:100%;
-     height:115px;
+     height:145px;
+}
+
+.aktivitäten {
+     padding: 4px;
 }
 
 
 .bars_bez{
      position: absolute;
-     top:60px;
+     top:110px;
      left:10px;
      float: left;
      width: 100%;
@@ -145,8 +150,8 @@ height:250px;
 
 .bars{
      position: absolute;
-     top:65px;
-     left:130px;
+     top:102px;
+     left:120px;
      float: left;
      width: 100%;
 }
@@ -155,26 +160,27 @@ height:250px;
 	float:left;
 	background-color: #e8e8e8;
 	width:100px;
-	height:10px;
+	height:12px;
 	border-radius: 3px;
+	top: 10px;
 }
 
 .inner{
 	width:30%;
-	background-color: #fce544;
+	background-color: #fbde16;
 }
 
 .inner2{
-	width:70%;
-	background-color: #79bbf2;
+	width:80%;
+	background-color: #50a6f2;
 }
 .inner3{
-	width:80%;
-	background-color: #79bbf2;
+	width:50%;
+	background-color: #50a6f2;
 }
 .inner4{
 	width:0%;
-	background-color: #79bbf2;
+	background-color: #50a6f2;
 }
 
 .trennleiste{
@@ -209,13 +215,15 @@ height:250px;
 	border-radius:50%;
 	background-color: #000;
 	float: left;
+	margin: 4px;
 }
 
 .daten{
 	font-size: 8pt;
 	line-height: 1.8em;
 	position: absolute;
-	left: 75px;
+	left: 80px;
+	margin-top: 10px;
 }
 
 .einstel_konto{
@@ -281,11 +289,12 @@ height:250px;
 }
 
 .showup{
-     margin-right:380px;
+     margin-right:calc(2% + 320px);
 }
 
 .active_profil{
-	top:50px;
+	top:0px;
+	opacity: 1;
 }
 
 .clearfix:after {
@@ -329,115 +338,68 @@ height:250px;
 }
 
 .trennung1{
-
-width:100%;
-height:1px;
-
-background-color:rgba(0,0,0,0.1);
-
+     width:100%;
+     height:1px;
+     background-color:rgba(0,0,0,0.1);
 }
-
-
-
 
 .ghosts{
-
-				
-
-		
-position: absolute;
+     position: absolute;
 	display: none;
-	opacity: 0.4;
+	color: #7b7b7b;
 	font-size: 1.9em;
 	padding: 13px 5px 5px 61px;
-
-
-
 }
 
-
 .tag1{
-
 	position: absolute;
 	display: none;
-	opacity: 0.4;
+	color: #7b7b7b;
 	font-size: 1.9em;
 	padding: 12px 4px 5px 47px;
 }
 
-
-
 .buchstabeS{
-
-width: 100%;
-height:60px;
-
-display:none;
-
-
-
+     width: 100%;
+     height:60px;
+     
+     display:none;
 }
 
 #t1{
-
-margin-left: 100px;
-
-
+     margin-left: 100px;
 }
 
 #t2{
-
-margin-left: 50px;
-
-
+     margin-left: 50px;
 }
 
 #t3{
-
-margin-left: 220px;
-
-
+     margin-left: 220px;
 }
 
 #t4{
-
-margin-left: 200px;
-
-
+     margin-left: 200px;
 }
+
 #t5{
-
-margin-left: 225px;
-
-
+     margin-left: 225px;
 }
 
 .inner1{
-
-
-	
-	
 	width:100%;
-
 	height:50px;
+
 	transition:all ease 0.5s;
 	padding: 13px 5px 5px 47px;
 	font-size: 1.9em;
-
-
 }
 
 .move_tag{
-
-margin-left: 50px;
-
-
+     margin-left: 50px;
 }
 
 .innerstate2{
-
-	
-	
 	padding-left: 10px;
 	width:100%;
 
@@ -445,39 +407,26 @@ margin-left: 50px;
 	transition:all ease 0.5s;
 	padding: 13px 5px 5px 47px;
 	font-size: 1.9em;
-
 }
 
 .buchstabeB{
-
-width: 100%;
-height:60px;
-
-display:none;
-
-
-
+     width: 100%;
+     height:60px;
+     
+     display:none;
 }
 
 .innerstate3{
-
-	
 	width:100%;
-
 	height:50px;
+	
 	transition:all ease 0.5s;
      padding: 13px 5px 5px 47px;
      font-size: 1.9em;
 }
 
-
-
-}
 .innerstate4{
-
-	
 	width:100%;
-
 	height:50px;
 
 	transition:all ease 0.5s;
@@ -486,22 +435,14 @@ display:none;
 }
 
 .andereV{
-
-width: 100%;
-display:none;
+     width: 100%;
+     display:none;
 
 	transition:all ease 0.5s;
-	
 	font-size: 1.9em;
-
-
-
-
 }
 
 .innerstate5{
-
-	
 	width:100%;
 	height:50px;
 	
@@ -510,19 +451,14 @@ display:none;
 }
 
 .innerstate6{
-
-	
 	width:100%;
 	height:50px;
 	
 	transition:all ease 0.5s;
 	padding: 13px 5px 5px 47px;
-
 }
 
 .innerstate7{
-
-	
 	width:100%;
 	height:50px;
 	
@@ -530,86 +466,64 @@ display:none;
 	padding: 13px 5px 5px 47px;
 }
 .hover_inner1{
-
-background-color: #ecf1f0;
-
-
+     background-color: #ecf1f0;
 }
 
-
 .active_ergebnisse{
-
-
-height:250px;
-
-
-
+     height:250px;
 }
 
 .active_innerstate{
-
-display: inline;
-
-
-
+     display: inline;
 }
 
 .hover_cont{
-
-
-position: absolute;
-top:50px;
-
-width:100%;
-height: 100px;
-
-
-
-display: none;
-
-z-index: 99;
+     position: absolute;
+     top:50px;
+     width:100%;
+     height: 100px;
+     display: none;
+     z-index: 99;
 }
 
 .hover_cont_on{
-
-
-display: block;
-
+     display: block;
 }
 
 .suche{
 	width:600px;
 	height:50px;
-	background-color: #fff;
+	background-color: rgba(255,255,255,0.8);
 	transition:all 2s;
 	border-radius: 5px 5px 0px 0px;
-	opacity: 0.8;
 }
 
 .suche:hover{
-     background-color: #e6e6e6;
+     background-color: rgba(236,236,236,0.8);
 	cursor: pointer;
 }
 
+.suche_nav {
+     border-radius: 0;
+     background-color: #e5e5e5;
+}
+
 .inhalt_fav{
-width: 100%;
-height:50px;
-float: left;
-opacity: 0.4;
-text-align: left;
-
-margin-top:-60px;
-padding-left: 70px;
-font-size: 0.9em;
-
-transition:all 0.5s ease;
+     width: 100%;
+     height:50px;
+     float: left;
+	color: #737373;
+     text-align: left;
+     
+     margin-top:-60px;
+     padding-left: 100px;
+     font-size: 0.9em;
+     
+     transition:all 0.5s ease;
 }
 
 .fav_off{
-
-opacity: 0;
-
-
+     opacity: 0;
 }
 
 .favo{
@@ -621,8 +535,7 @@ opacity: 0;
 }
 
 .fav1{
-     background-color: #fff;
-     opacity:1;
+     background-color: rgba(255,255,255,0.8);
      border-right: 1px solid rgba(0,0,0,0.1);
      border-top: 1px solid rgba(0,0,0,0.1);
      float:left;
@@ -631,32 +544,34 @@ opacity: 0;
 }
 
 .fav2{
-	background-color: #fff;
-	opacity:1;
+	background-color: rgba(255,255,255,0.8);
 	border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .fav3{
-	background-color: #fff;
-	opacity:1;
+	background-color: rgba(255,255,255,0.8);
 	border-left: 1px solid rgba(0,0,0,0.1);
 	border-top: 1px solid rgba(0,0,0,0.1);
 	border-bottom-right-radius: 5px;
 }
 
+.fav_temp {
+     font-weight: 500;
+     font-size: 30px;
+}
+
 .navi{
-	width:100%;
+	width:2500px;
 	height:50px;
-	background-color: #fff;
 	position: fixed;
 	top:0px;
-	left:0px;
+	left:calc(50% - 1250px);
 	transition:all 600ms cubic-bezier(0.86, 0, 0.07, 1);
 	box-shadow: 0px 1px 8px #6a6a6a;
 	opacity: 0.9;
 
 	z-index: 8;
-  	background: url("../imgs/navi3.svg");
+  	background: url("../imgs/navi.svg");
   	background-size: 100% 100%;
   	position: absolute;
   	overflow: hidden;
@@ -687,7 +602,7 @@ opacity: 0;
 }
 
 .active_suche{
-	background-color:#ecf1f0; 
+	background-color:#919191; 
 	margin-top: 0px;
 	top:0px;
 }
@@ -711,13 +626,12 @@ opacity: 0;
 .bar{
 	width:100%;
 	height:40px;
-	background-color: #000;
-
+	background-color: #262626;
 }
 
 .diagramm{
 	position: fixed;
-	bottom:-100px;
+	bottom:-150px;
 	width:100%;
 	height:150px;
 	background-color: #f2fffb;
@@ -725,54 +639,47 @@ opacity: 0;
 }
 
 .container_vohersage{
-	width:calc(100% + 5000px);
+	width:100%;
 	position: fixed;
 	bottom:-550px;
      left:0px;
 	transition: all 0.6s ease;
 	overflow:scroll;
-
+     white-space: nowrap;
 	background-color: rgba(255,255,255,0.8);
 }
 
 .karten{
-	width:5.8%;
+	width:25%;
 	height:550px;
-	
+
+	display: -moz-inline-stack;
+     display: inline-block;
+     zoom: 1;
+     *display: inline;
+     	
 	border-right: 1px solid rgba(0,0,0,0.1);
-	float:left;
+
 	transition:all 1s;
 	padding-top: 26px;
-	
 }
 
 .move_card{
-
-
-
-
-margin-left:-420px;
-
-
-
+     margin-left:-380px;
 }
+
 .off_card{
+    opacity: 0;
+}
 
-
-opacity: 0;
+.off_display{
 
 
 
 }
 
 .opacity_card{
-
-
-
-display: inline;
-
-
-
+     display: inline;
 }
 
 .little_card{
@@ -780,11 +687,12 @@ display: inline;
 }
 
 .drei_tage{
-     width:7%;
+     width:33%;
 }
 
 .sechszehn_tage{
-     width:3.4%;
+     width:15%;
+     margin-left:20px;
 }
 
 .active_vohersage{
@@ -903,39 +811,196 @@ display: inline;
 
 
 .fav_icon{
-	margin-left: 10px;
-	margin-top: 10px;
+	margin-left: 25px;
+	margin-top: 25px;
 
 	transition:all 0.5s ease;
 }
 
 .baric{
-	width:30px;
-	height:30px;
-	border-radius: 20px;
-	border:2px solid #fff;
+	width:27px;
+	height:27px;
 	float:left;
-	margin: 5px;
+	margin: 6.5px;
 	color:#fff;
 	font-size:7pt;
 	text-align: center;
 	vertical-align: middle;
 	transition: all 0.6s ease;
-	padding-bottom: 5px;
 }
 
 .container_baric{
 	position: absolute;
-	left:8%;
+	left:calc(50% - 593px);
+}
+
+.regen {
+     left: 0;
+     top: 0;
+     height: 27px;
+     width: 27px;
+     display: block;
+  	background: url("../imgs/icon_regen_inactive.svg");
+  	background-size: 100% 100%;
+}
+
+.regen_active {
+     background: url("../imgs/icon_regen_active.svg");
+}
+
+.unwetter {
+     left: 40;
+     top: 0;
+     height: 27px;
+     width: 27px;
+     display: block;
+  	background: url("../imgs/icon_unwetter_inactive.svg");
+  	background-size: 100% 100%;
+}
+
+.unwetter_active {
+     background: url("../imgs/icon_unwetter_active.svg");
+}
+
+.pollen {
+     left: 80;
+     top: 0;
+     height: 27px;
+     width: 27px;
+     display: block;
+  	background: url("../imgs/icon_pollen_inactive.svg");
+  	background-size: 100% 100%;
+}
+
+.pollen_active {
+     background: url("../imgs/icon_pollen_active.svg");
+}
+
+.wolken {
+     left: 120;
+     top: 0;
+     height: 27px;
+     width: 27px;
+     display: block;
+  	background: url("../imgs/icon_wolken_inactive.svg");
+  	background-size: 100% 100%; 
+}
+
+.wolken_active {
+     background: url("../imgs/icon_wolken_active.svg");
 }
 
 .container_teilung{
 	position: absolute;
-	right:8%;
+	right:calc(50% - 593px);
 }
 
-.loc{
-     background-color: #000;
+.locicon {
+     left: 0;
+     top: 0;
+     height: 27px;
+     width: 27px;
+  	background: url("../imgs/icon_aktuell_inactive.svg");
+  	background-size: 100% 100%;
+}
+
+.locicon_active {
+     left: 0;
+     top: 0;
+     height: 27px;
+     width: 27px;
+     background-size: 100% 100%; 
+     background: url("../imgs/icon_aktuell_active.svg");
+     position: absolute;
+     opacity: 0;
+}
+
+.tag1icon {
+     left: 40px;
+     top: 0;
+     height: 27px;
+     width: 27px;
+  	background: url("../imgs/icon_1tag_inactive.svg");
+  	background-size: 100% 100%;
+}
+
+.tag1icon_active {
+     left: 40px;
+     top: 0;
+     height: 27px;
+     width: 27px;
+     background-size: 100% 100%; 
+     background: url("../imgs/icon_1tag_active.svg");
+     position: absolute;
+     opacity: 0;
+}
+
+.tage3icon {
+     left: 80px;
+     top: 0;
+     height: 27px;
+     width: 27px;
+  	background: url("../imgs/icon_3tage_inactive.svg");
+  	background-size: 100% 100%;
+}
+
+.tage3icon_active {
+     left: 80px;
+     top: 0;
+     height: 27px;
+     width: 27px;
+     background-size: 100% 100%; 
+     background: url("../imgs/icon_3tage_active.svg");
+     position: absolute;
+     opacity: 0;
+}
+
+.tage16icon {
+     left: 120px;
+     top: 0;
+     height: 27px;
+     width: 27px;
+  	background: url("../imgs/icon_16tage_inactive.svg");
+  	background-size: 100% 100%; 
+}
+
+.tage16icon_active {
+     left: 120px;
+     top: 0;
+     height: 27px;
+     width: 27px;
+     background-size: 100% 100%; 
+     background: url("../imgs/icon_16tage_active.svg");
+     position: absolute;
+     opacity: 0;
+}
+
+.weicon {
+     left: 160px;
+     top: 0;
+     height: 27px;
+     width: 27px;
+  	background: url("../imgs/icon_we_inactive.svg");
+  	background-size: 100% 100%; 
+}
+
+.weicon_active {
+     left: 160px;
+     top: 0;
+     height: 27px;
+     width: 27px;
+     background-size: 100% 100%; 
+     background: url("../imgs/icon_we_active.svg");
+     position: absolute;
+     opacity: 0;
+}
+
+.active_vis {
+     opacity: 1;
+}
+
+.inactive_vis {
+     opacity: 0;
 }
 
 .remove_loc{
@@ -947,15 +1012,14 @@ display: inline;
 }
 
 .play{
+     left:calc(50% - 20px);
+     top: 0;
+     margin: 7.5px 8.5px 7.5px 8.5px;
+     height: 25px;
+     width: 23px;
      position: absolute;
-     left:calc(50% + 10px);
-     bottom:7px;
-
-     width: 0;
-     height: 0;
-     border-style: solid;
-     border-width: 12.5px 0 12.5px 21.7px;
-     border-color: transparent transparent transparent #ffffff;
+  	background: url("../imgs/play_button.svg");
+  	background-size: 100% 100%; 
 }
 
 .menu_bar{
@@ -984,33 +1048,25 @@ display: inline;
 
 #map-canvas{
      overflow: hidden;
+
   }
-
-
-
 
 b {
      font-weight: 500;
 }
 
-
 .menu{
-
-opacity: 0;
-z-index:0;
-
-
+     opacity: 0;
+     z-index:0;
 }
 
-
 .search_off{
-
-opacity: 0;
+     opacity: 0;
 }
 
 .suchicon {
-     left: 550px;
-     top: 12px;
+     right: 13px;
+     margin: 13px 0px;
      height: 24px;
      width: 27px;
      display: block;
@@ -1021,8 +1077,7 @@ opacity: 0;
 }
 
 .mylocation{
-     left:7px;
-     top: 17px;
+     margin:17px;
      height: 15px;
      width: 15px;
      display: block;
@@ -1031,4 +1086,5 @@ opacity: 0;
   	position: absolute;
   	overflow: hidden;
 }
+
 
