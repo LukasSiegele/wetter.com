@@ -56,30 +56,25 @@ $(".buchstabeB").addClass("active_innerstate");
 
 $(document).keypress( function(e){
 
-  if(e.which == 13) {
-
-      event.preventDefault();
-      $(this).toggleClass("active_suche");
-    $(".container_diagramm").toggleClass("active_dia");
-    $(".container_vohersage").toggleClass("active_vohersage");
-    $(".scroll_container").toggleClass("display_true");
-    $(".container_aktuelles").toggleClass("active_aktuelles");
-    $(".container_suche").toggleClass("active");
-    $(".favo").toggleClass("active_fav");
-    $(".inhalt_fav").toggleClass("fav_off");
-    $(".fav_icon").toggleClass("fav_off");
-
-     $(".hover_cont").toggleClass("hover_cont_on");
-     $(".suche").toggleClass("suche_nav");
-
-
-
-  }
-
-
-
-
-  });
+     if(e.which == 13) {
+     
+          event.preventDefault();
+          $(this).toggleClass("active_suche");
+          $(".diagramm").toggleClass("dia_out");
+          
+          $(".container_diagramm").toggleClass("active_dia");
+          $(".container_vohersage").toggleClass("active_vohersage");
+          $(".scroll_container").toggleClass("display_true");
+          $(".container_aktuelles").toggleClass("active_aktuelles");
+          $(".container_suche").toggleClass("active");
+          $(".favo").toggleClass("active_fav");
+          $(".inhalt_fav").toggleClass("fav_off");
+          $(".fav_icon").toggleClass("fav_off");
+          
+          $(".hover_cont").toggleClass("hover_cont_on");
+          $(".suche").toggleClass("suche_nav");
+     }
+});
 
 
  $(".hover_cont").hover( function(){
@@ -309,7 +304,6 @@ $(".innerstate7").hover(function(){
 $(".scroll_container").scroll(function(){
 
     $(".container_vohersage").addClass("click_v");
-    $(".diagramm").addClass("click_v");
 
   console.log(0);
 
@@ -325,20 +319,7 @@ $(".scroll_container").scroll(function(){
      console.log(scrollPos);
          
      if(scrollPos <= 10){
-          $(".diagramm").removeClass("click_v");
-          $(".container_vohersage").removeClass("click_v");
-          
-          $(".background").removeClass("fadeout");
-          
-          $(".locicon").addClass("inactive_vis");
-          $(".tag1icon").removeClass("inactive_vis");
-          $(".tage3icon").removeClass("inactive_vis");
-          
-          $(".locicon_active").addClass("active_vis");
-          $(".tag1icon_active").removeClass("active_vis");
-          $(".tage3icon_active").removeClass("active_vis");
-          
-          $(".container_aktuelles").removeClass("move_aktuelles");
+          aktuell();
      }
 
      if(scrollPos <= 800 && scrollPos >= 10){
@@ -372,8 +353,6 @@ $(".scroll_container").scroll(function(){
    
 
      if(scrollPos >= 800 && scrollPos <= 1200){
-          console.log(2);
-          
           $(".tage3icon").addClass("inactive_vis");
           $(".tag1icon").removeClass("inactive_vis");
           $(".tage16icon").removeClass("inactive_vis");
@@ -579,7 +558,7 @@ function initialize() {
 
 
   var mapOptions = {
-    zoom: 9,
+    zoom: 6,
     maxZoom: 9,
     minZoom: 6,
     disableDefaultUI: true,
@@ -591,7 +570,7 @@ function initialize() {
     scaleControl: false,
     scrollwheel: false,
     disableDoubleClickZoom: true,
-    center: new google.maps.LatLng(48.3994019, 9.8045704),
+    center: new google.maps.LatLng(51.3994019, 9.8045704),
      mapTypeControlOptions: {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
     },
@@ -734,7 +713,19 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 function aktuell() {
-     
+          $(".container_vohersage").removeClass("click_v");
+          
+          $(".background").removeClass("fadeout");
+          
+          $(".locicon").addClass("inactive_vis");
+          $(".tag1icon").removeClass("inactive_vis");
+          $(".tage3icon").removeClass("inactive_vis");
+          
+          $(".locicon_active").addClass("active_vis");
+          $(".tag1icon_active").removeClass("active_vis");
+          $(".tage3icon_active").removeClass("active_vis");
+          
+          $(".container_aktuelles").removeClass("move_aktuelles");
 }
 
 
