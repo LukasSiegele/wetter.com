@@ -386,8 +386,14 @@ window.setTimeout(function() {
 
        $(".karte4").addClass("off_card");
 
+window.setTimeout(function() {
+       $(".karte2").addClass("off_display");
 
+       $(".karte3").addClass("off_display");
 
+       $(".karte4").addClass("off_display");
+
+         }, 1000);
 
     }
 
@@ -402,16 +408,16 @@ window.setTimeout(function() {
     $(".vorhersage_temperatur").removeClass("versch_text");
     $(".details").removeClass("versch_text");
 
-
+      window.setTimeout(function() {
        $(".karte2").removeClass("move_card");
 
        $(".karte3").removeClass("move_card");
 
        $(".karte4").removeClass("move_card");
 
+ }, 50);
 
 
-      window.setTimeout(function() {
        $(".karte2").removeClass("off_card");
 
        $(".karte3").removeClass("off_card");
@@ -419,7 +425,20 @@ window.setTimeout(function() {
        $(".karte4").removeClass("off_card");
 
 
-         }, 50);
+
+ 
+
+    
+       $(".karte2").removeClass("off_display");
+
+       $(".karte3").removeClass("off_display");
+
+       $(".karte4").removeClass("off_display");
+
+
+      
+
+     
     }
 
        if(scrollPos >= 1200){
@@ -606,7 +625,7 @@ function initialize() {
 
 
   var mapOptions = {
-    zoom: 6,
+    zoom: 9,
     maxZoom: 9,
     minZoom: 6,
     disableDefaultUI: true,
@@ -618,7 +637,7 @@ function initialize() {
     scaleControl: false,
     scrollwheel: false,
     disableDoubleClickZoom: true,
-    center: new google.maps.LatLng(51.165691, 10.451526),
+    center: new google.maps.LatLng(48.3994019, 9.8045704),
      mapTypeControlOptions: {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
     },
