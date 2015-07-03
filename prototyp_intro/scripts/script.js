@@ -311,7 +311,7 @@ $(".scroll_container").scroll(function(){
     $(".container_vohersage").addClass("click_v");
     $(".diagramm").addClass("click_v");
 
-
+  console.log(0);
 
     $(".container_aktuelles").addClass("move_aktuelles");
 });
@@ -321,158 +321,112 @@ $(".scroll_container").scroll(function(){
 
 
 $(".scroll_container").scroll(function(){
-    var scrollPos = $(".scroll_container").scrollTop();
-    
-    //console.log(scrollPos);
-
-    if(scrollPos <= 10){
-      $(".diagramm").removeClass("click_v");
-      $(".container_vohersage").removeClass("click_v");
-
-
-    $(".background").removeClass("fadeout");
-    
-    
-    
-    $(".tag1icon").addClass("inactive_vis");
-    $(".locicon").removeClass("inactive_vis");
-    $(".tage3icon").removeClass("inactive_vis");
-    $(".tag1icon_active").addClass("active_vis");
-    $(".locicon_active").removeClass("active_vis");
-    $(".tage3icon_active").removeClass("active_vis");
-
-    $(".container_aktuelles").removeClass("move_aktuelles");
-
-
-
-    }
-
- 
-   
-
-    if(scrollPos >= 800 ){
-
-      
-    $(".tage3icon").addClass("inactive_vis");
-    $(".tag1icon").removeClass("inactive_vis");
-    $(".tage16icon").removeClass("inactive_vis");
-    
-    $(".tage3icon_active").addClass("active_vis");
-    $(".tag1icon_active").removeClass("active_vis");
-    $(".tage16icon_active").removeClass("active_vis");
-    
-    $(".karten").addClass("drei_tage");
-    $(".16").removeClass("active_tag1");
-    $(".beschreibung").addClass("versch_text");
-    $(".beschreibung_icon").addClass("versch_text");
-    $(".vorhersage_temperatur").addClass("versch_text");
-    $(".details").addClass("versch_text");
-window.setTimeout(function() {
-       $(".karte2").addClass("move_card");
-
-       $(".karte3").addClass("move_card");
-
-       $(".karte4").addClass("move_card");
-  }, 50);
-
-      
-          
+     var scrollPos = $(".scroll_container").scrollTop();
+     console.log(scrollPos);
          
-    
+     if(scrollPos <= 10){
+          $(".diagramm").removeClass("click_v");
+          $(".container_vohersage").removeClass("click_v");
+          
+          $(".background").removeClass("fadeout");
+          
+          $(".locicon").addClass("inactive_vis");
+          $(".tag1icon").removeClass("inactive_vis");
+          $(".tage3icon").removeClass("inactive_vis");
+          
+          $(".locicon_active").addClass("active_vis");
+          $(".tag1icon_active").removeClass("active_vis");
+          $(".tage3icon_active").removeClass("active_vis");
+          
+          $(".container_aktuelles").removeClass("move_aktuelles");
+     }
 
-       $(".karte2").addClass("off_card");
-
-       $(".karte3").addClass("off_card");
-
-       $(".karte4").addClass("off_card");
-
-window.setTimeout(function() {
-       $(".karte2").addClass("off_display");
-
-       $(".karte3").addClass("off_display");
-
-       $(".karte4").addClass("off_display");
-
-         }, 1000);
-
-    }
-
-    if(scrollPos <= 800 && scrollPos >= 3){
-
-      $(".3").removeClass("active_tag1");
-      $(".1").addClass("active_tag1");
-      $(".loc").removeClass("active_tag1");
-    $(".karten").removeClass("drei_tage");
-    $(".beschreibung").removeClass("versch_text");
-    $(".beschreibung_icon").removeClass("versch_text");
-    $(".vorhersage_temperatur").removeClass("versch_text");
-    $(".details").removeClass("versch_text");
-
-      window.setTimeout(function() {
-       $(".karte2").removeClass("move_card");
-
-       $(".karte3").removeClass("move_card");
-
-       $(".karte4").removeClass("move_card");
-
- }, 50);
-
-
-       $(".karte2").removeClass("off_card");
-
-       $(".karte3").removeClass("off_card");
-
-       $(".karte4").removeClass("off_card");
-
-
-
- 
-
-    
-       $(".karte2").removeClass("off_display");
-
-       $(".karte3").removeClass("off_display");
-
-       $(".karte4").removeClass("off_display");
-
-
-      
-
-     
-    }
-
-       if(scrollPos >= 1200){
-        $(".3").removeClass("active_tag1");
-        $(".16").addClass("active_tag1");
-        $(".beschreibung").removeClass("versch_text");
-    $(".beschreibung_icon").removeClass("versch_text");
-    $(".vorhersage_temperatur").removeClass("versch_text");
-    $(".details").removeClass("versch_text");
-      
-
-      
-      
-      
-
-    $(".karten").addClass("sechszehn_tage");
-
-
-    
-  
-
-
-
-    }
-
-    if(scrollPos <= 1200){
-
-      
-
-    $(".karten").removeClass("sechszehn_tage");
-
-    }
-
+     if(scrollPos <= 800 && scrollPos >= 10){
+          $(".tag1icon").addClass("inactive_vis");
+          $(".locicon").removeClass("inactive_vis");
+          $(".tage3icon").removeClass("inactive_vis");
+          
+          $(".tag1icon_active").addClass("active_vis");
+          $(".locicon_active").removeClass("active_vis");
+          $(".tage3icon_active").removeClass("active_vis");
+          
+          $(".karten").removeClass("drei_tage");
+          $(".beschreibung").removeClass("versch_text");
+          $(".beschreibung_icon").removeClass("versch_text");
+          $(".vorhersage_temperatur").removeClass("versch_text");
+          $(".details").removeClass("versch_text");
+          
+          window.setTimeout(function() {
+               $(".karte2").removeClass("move_card");
+               $(".karte3").removeClass("move_card");
+               $(".karte4").removeClass("move_card");
+          }, 50);
+          
+          $(".karte2").removeClass("off_card");
+          $(".karte3").removeClass("off_card");
+          $(".karte4").removeClass("off_card");
+          $(".karte2").removeClass("off_display");
+          $(".karte3").removeClass("off_display");
+          $(".karte4").removeClass("off_display");
+     }
    
+
+     if(scrollPos >= 800 && scrollPos <= 1200){
+          console.log(2);
+          
+          $(".tage3icon").addClass("inactive_vis");
+          $(".tag1icon").removeClass("inactive_vis");
+          $(".tage16icon").removeClass("inactive_vis");
+                   
+          $(".tage3icon_active").addClass("active_vis");
+          $(".tag1icon_active").removeClass("active_vis");
+          $(".tage16icon_active").removeClass("active_vis");
+                   
+          $(".karten").addClass("drei_tage");
+          $(".16").removeClass("active_tag1");
+          $(".beschreibung").addClass("versch_text");
+          $(".beschreibung_icon").addClass("versch_text");
+          $(".vorhersage_temperatur").addClass("versch_text");
+          $(".details").addClass("versch_text");
+          $(".karten").removeClass("sechszehn_tage");
+          $(".karte5").removeClass("karte5_16");
+          
+          window.setTimeout(function() {
+               $(".karte2").addClass("move_card");               
+               $(".karte3").addClass("move_card");
+               $(".karte4").addClass("move_card");
+          }, 50);
+          
+          $(".karte2").addClass("off_card");
+          $(".karte3").addClass("off_card");
+          $(".karte4").addClass("off_card");
+          
+          window.setTimeout(function() {
+               $(".karte2").addClass("off_display");
+               $(".karte3").addClass("off_display");
+               $(".karte4").addClass("off_display");
+          }, 1000);
+     }
+
+
+
+     if(scrollPos >= 1200){
+          $(".tage16icon").addClass("inactive_vis");
+          $(".tage3icon").removeClass("inactive_vis");
+          $(".weicon").removeClass("inactive_vis");
+                   
+          $(".tage16icon_active").addClass("active_vis");
+          $(".tage3icon_active").removeClass("active_vis");
+          $(".weicon_active").removeClass("active_vis");
+          
+          $(".beschreibung").removeClass("versch_text");
+          $(".beschreibung_icon").removeClass("versch_text");
+          $(".vorhersage_temperatur").removeClass("versch_text");
+          $(".details").removeClass("versch_text");
+          
+          $(".karten").addClass("sechszehn_tage");
+          $(".karte5").addClass("karte5_16");
+     }
 });
 
 

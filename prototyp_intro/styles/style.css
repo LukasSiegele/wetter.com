@@ -647,6 +647,7 @@ body	{
 	overflow:scroll;
      white-space: nowrap;
 	background-color: rgba(255,255,255,0.8);
+	
 }
 
 .karten{
@@ -665,7 +666,7 @@ body	{
 }
 
 .move_card{
-     margin-left:-380px;
+     margin-left:-33.3%;
 }
 
 .off_card{
@@ -673,8 +674,6 @@ body	{
 }
 
 .off_display{
-
-
 
 }
 
@@ -687,12 +686,15 @@ body	{
 }
 
 .drei_tage{
-     width:33%;
+     width:33.3%;
 }
 
 .sechszehn_tage{
-     width:15%;
-     margin-left:20px;
+     width: 15%;
+}
+
+.karte5_16 {
+     margin-left: 54%;
 }
 
 .active_vohersage{
