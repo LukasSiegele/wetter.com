@@ -644,7 +644,7 @@ function initialize() {
   /*var swBound = new google.maps.LatLng(44.570904, -12.678223);
   var neBound = new google.maps.LatLng(56.953962, 33.596191);*/
   var bounds = new google.maps.LatLngBounds(swBound, neBound);
-  var srcImage = 'imgs/temperatur.png';
+  var srcImage = 'imgs/temperatur2.png';
 
   overlay = new USGSOverlay(bounds, srcImage, map);
 
