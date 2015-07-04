@@ -89,6 +89,80 @@ body	{
 
 	z-index: 99;
 }
+
+.burger_icon{
+     width:21px;
+	height:14px;
+	position: absolute;
+	left:calc(50% - 400px);
+	top:17px;
+	background: url("../imgs/burger_icon.svg");
+  	background-size: 100% 100%;
+
+	z-index: 99;
+}
+
+.container_menu {
+     height: 50px;
+     width: 300px;
+     position: absolute;
+     top: 0px;
+     left: calc(50% - 600px);
+     z-index: 98;
+     overflow: hidden;
+     transition: all 0.5s ease;
+}
+
+.menu_active {
+     height: 450px;
+     box-shadow: 0px 1px 8px #6a6a6a;
+}
+
+.wetter_logo {
+     height: 50px;
+     width: 300px;
+     background: url("../imgs/wetter_logo.svg");
+  	background-size: 100% 100%;
+  	opacity: 0;
+}
+
+.wetter_logo_active {
+     opacity: 1;
+}
+
+.menu_liste {
+     height: 400px;
+     width: 300px;
+     background-color: #fff;
+}
+
+.menu_listitem {
+     height: 50px;
+     border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.menu_listitem:hover {
+     background-color: #fafafa;
+}
+
+.menu_listitem_text {
+     padding: 12px 12px 12px 12px;
+     font-size: large;
+     font-weight: 300;
+     float: left;
+}
+
+.menu_listitem_color {
+     height: 50px;
+     width: 7px;
+     background-color: #e8e8e8;
+     float: left;
+}
+
+#home {
+     background-color: #50a6f2;
+}
+
 .profileinst{
 	width:300px;
 	height:270px;

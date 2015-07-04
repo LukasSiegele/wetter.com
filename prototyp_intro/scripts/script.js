@@ -99,6 +99,11 @@ $(document).keypress( function(e){
 
 
   });*/
+$(".burger_icon").click( function(){
+     $(".container_menu").toggleClass("menu_active");
+     $(".wetter_logo").toggleClass("wetter_logo_active");
+});
+
 
 $(".profilpic").click( function(){
 
