@@ -23,13 +23,12 @@ $(".tag1").toggleClass("active_innerstate");
 $(".suche").keydown( function(e){
 
   if(e.which == 83) {
-
-$(".ergebnisse").addClass("active_ergebnisse");
-$(".buchstabeS").addClass("active_innerstate");
-$(".andereV").addClass("active_innerstate");
-
-
-}
+    $(".ergebnisse").addClass("active_ergebnisse");
+      setTimeout(function(){
+        $(".buchstabeS").addClass("active_innerstate");
+        $(".andereV").addClass("active_innerstate");
+      } , 400);
+  }
 
   if(e.which == 66) {
 
