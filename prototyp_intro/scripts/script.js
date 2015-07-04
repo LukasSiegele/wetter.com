@@ -108,12 +108,33 @@ $(".profilpic").click( function(){
 
     $(".trennleiste").removeClass("einstel_trenn");
 
-    $(".profileinst").removeClass("einstel_konto");
     $(".guide").removeClass("guide_off");
-
+    $(".profileinst").removeClass("einstel_konto_aktivitaten");
+     $(".aktivitaten_cont").removeClass("aktivitaten_cont_active");
+     $(".profileinst").removeClass("einstel_konto_aktivitaten");
+     $(".aktivitaten_cont").removeClass("aktivitaten_cont_active");
 
 
   });
+  
+  $(".platzhalter").click(function(){
+
+    $(".trennleiste").toggleClass("einstel_trenn");
+
+    $(".profileinst").toggleClass("einstel_konto");
+    $(".profil_detail").toggleClass("profil_detail_active");
+    $(".profil_settings").toggleClass("settings_active");
+    $(".profileinst").removeClass("einstel_konto_aktivitaten");
+       $(".aktivitaten_cont").removeClass("aktivitaten_cont_active");
+    
+});
+  
+  $(".aktivitaten").click( function(){
+       $(".profileinst").toggleClass("einstel_konto_aktivitaten");
+       $(".aktivitaten_cont").toggleClass("aktivitaten_cont_active");
+       $(".gesundheit").toggleClass("gesundheit_cont_active");
+  });
+  
 
 $(window).load( function(){
 
@@ -209,15 +230,7 @@ $(window).resize(function(){
 
 });
 
-$(".platzhalter").click(function(){
 
-    $(".trennleiste").toggleClass("einstel_trenn");
-
-    $(".profileinst").toggleClass("einstel_konto");
-    $(".guide").toggleClass("guide_off");
-    $(".profil_detail").toggleClass("profil_detail_active");
-    
-});
 
 $(".inner1").click(function(){
 
@@ -596,7 +609,7 @@ function initialize() {
   /*var swBound = new google.maps.LatLng(44.570904, -12.678223);
   var neBound = new google.maps.LatLng(56.953962, 33.596191);*/
   var bounds = new google.maps.LatLngBounds(swBound, neBound);
-  var srcImage = 'imgs/temperatur3.png';
+  var srcImage = 'imgs/temperatur6.png';
 
   overlay = new USGSOverlay(bounds, srcImage, map);
 

@@ -91,7 +91,7 @@ body	{
 }
 .profileinst{
 	width:300px;
-	height:350px;
+	height:270px;
 	background-color:#fafafa;
 	position: absolute;
 	right:calc(50% - 600px);
@@ -104,7 +104,6 @@ body	{
      opacity: 0;
 
 }
-
 
 .tipp1_profil{
      margin-top: 50px;
@@ -143,7 +142,7 @@ body	{
 .bars_bez{
      position: absolute;
      top:110px;
-     left:10px;
+     left:15px;
      float: left;
      width: 100%;
 }
@@ -151,36 +150,39 @@ body	{
 .bars{
      position: absolute;
      top:102px;
-     left:120px;
-     float: left;
+     left:130px;
      width: 100%;
 }
 
 .bar_back{
-	float:left;
+
 	background-color: #e8e8e8;
-	width:100px;
-	height:12px;
+	width:120px;
+	height:13px;
 	border-radius: 3px;
-	top: 10px;
+	margin-top: 18.5px;
 }
 
 .inner{
 	width:30%;
 	background-color: #fbde16;
+	border-radius: 3px 0px 0px 3px;
 }
 
 .inner2{
 	width:80%;
 	background-color: #50a6f2;
+	border-radius: 3px 0px 0px 3px;
 }
 .inner3{
 	width:50%;
 	background-color: #50a6f2;
+	border-radius: 3px 0px 0px 3px;
 }
 .inner4{
 	width:0%;
 	background-color: #50a6f2;
+	border-radius: 3px 0px 0px 3px;
 }
 
 .trennleiste{
@@ -189,16 +191,138 @@ body	{
 	background-color: #fff;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 	border-top: 1px solid rgba(0,0,0,0.1);
+	overflow: hidden;
 }
 
 .platzhalter{
 	float:left;
-	padding: 2px;
+	padding-top: 2px;
 	padding-left: 5px;
 }
 
-.text{
+.profil_settings {
+     height: 0px;
+     width: 300px;
+     overflow: hidden;
+     transition:all ease 0.5s;
+     
+}
 
+.settings_active {
+     height: 100px;
+}
+
+.aktivitaten {
+     height: 49px;
+     width: 100%;
+     background-color:#fff;
+}
+
+.aktivitaten_color {
+     height: 49px;
+     width: 7px;
+     background-color: #50a6f2;
+     float:left;
+}
+
+.gesundheit_color {
+     height: 49px;
+     width: 7px;
+     background-color: #fbde16;
+     float:left;
+}
+
+.gesundheit {
+     height: 49px;
+     width: 100%;
+     border-top: 1px solid rgba(0,0,0,0.1);
+     background-color:#fff;
+}
+
+.gesundheit_cont_active{
+     position: absolute;
+     bottom: 1px;
+     
+}
+
+.text_profil_settings {
+     margin: 12px;
+     font-weight: 200;
+     font-size: large;
+     float: left;
+}
+
+.aktivitaten_cont {
+     width: 300px;
+     height: 0px;
+     position: absolute;
+     background-color:#fafafa;
+     transition:all ease 0.5s;
+     overflow: hidden;
+}
+
+.aktivitaten_cont_active {
+     height: 160px;
+     border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.aktivitaten_liste {
+     height: 32px;
+     width: auto;
+     padding: 3px 0px 0px 20px;
+     border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.aktivitaten_liste_text {
+     position: absolute;
+}
+
+.aktivitaten_liste_bar {
+     margin: 6px 0px 0px 110px;
+     background-color: #e8e8e8;
+	width:120px;
+	height:13px;
+	border-radius: 3px;
+	position: absolute;
+
+}
+
+.aktivitaten_liste_bar_angeln {
+     width:90%;
+	background-color: #50a6f2;
+	height:13px;
+	border-radius: 3px 0px 0px 3px;
+}
+
+.aktivitaten_liste_bar_bergsteigen {
+     width:80%;
+	background-color: #50a6f2;
+	height:13px;
+	border-radius: 3px 0px 0px 3px;
+}
+
+.aktivitaten_liste_bar_campen {
+     width:60%;
+	background-color: #50a6f2;
+	height:13px;
+	border-radius: 3px 0px 0px 3px;
+}
+
+.aktivitaten_liste_bar_fußball {
+     width:90%;
+	background-color: #50a6f2;
+	height:13px;
+	border-radius: 3px 0px 0px 3px;
+}
+
+.aktivitaten_liste_bar_fahrrad {
+     width:100%;
+	background-color: #50a6f2;
+	height:13px;
+	border-radius: 3px;
+}
+
+.text{
 	position: absolute;
 	right: 2%;
 }
@@ -209,25 +333,12 @@ body	{
 	padding:10px;
 }
 
-.profilbild_big{
-	width: 50px;
-	height:50px;
-	border-radius:50%;
-	background-color: #000;
-	float: left;
-	margin: 4px;
-}
-
-.daten{
-	font-size: 8pt;
-	line-height: 1.8em;
-	position: absolute;
-	left: 80px;
-	margin-top: 10px;
-}
-
 .einstel_konto{
-     height:400px;
+     height: 371px;
+}
+
+.einstel_konto_aktivitaten{
+     height: 531px;
 }
 
 .einstel_trenn{
@@ -571,7 +682,7 @@ body	{
 	opacity: 0.9;
 
 	z-index: 8;
-  	background: url("../imgs/navi.svg");
+  	background: url("../imgs/navi3.svg");
   	background-size: 100% 100%;
   	position: absolute;
   	overflow: hidden;
@@ -640,6 +751,8 @@ body	{
 	height:190px;
 	background-color: rgba(255,255,255,0.72);
 	transition:all 0.5s ease;
+	background: url("../imgs/diagramm_test.png");
+  	background-size: 1440px calc(100% - 40px);
 }
 
 .container_vohersage{
