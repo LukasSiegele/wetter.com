@@ -91,12 +91,12 @@ body	{
 }
 
 .burger_icon{
-     width:21px;
+     width:22.5px;
 	height:14px;
 	position: absolute;
-	left:calc(50% - 400px);
+	left:calc(50% - 420px);
 	top:17px;
-	background: url("../imgs/burger_icon.svg");
+	background: url("../imgs/burger_icon2.svg");
   	background-size: 100% 100%;
 
 	z-index: 99;
@@ -127,7 +127,7 @@ body	{
 .wetter_logo {
      height: 50px;
      width: 300px;
-     background: url("../imgs/wetter_logo.svg");
+     background: url("../imgs/wetter_logo2.svg");
   	background-size: 100% 100%;
   	opacity: 0;
 }
@@ -763,7 +763,7 @@ body	{
 	opacity: 0.9;
 
 	z-index: 8;
-  	background: url("../imgs/navi3.svg");
+  	background: url("../imgs/navi2.svg");
   	background-size: 100% 100%;
   	position: absolute;
   	overflow: hidden;
