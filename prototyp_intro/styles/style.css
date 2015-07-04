@@ -947,7 +947,7 @@ body	{
 
 
 .beschreibung{
-     padding-left: 60px;
+     padding-left: 40px;
      width:100%;
      height:50px;
      transition:all 0.5s ease;
@@ -958,7 +958,7 @@ body	{
 .beschreibung_icon{
      width:100%;
      height:50px;
-     padding-left:60px;
+     padding-left:40px;
      transition:all 0.5s ease;
      text-align: left;
 }
@@ -966,28 +966,31 @@ body	{
 .vorhersage_temperatur{
      width:100%;
      height:50px;
-     padding-left: 60px;
+     padding-left: 40px;
      text-align: left;
      transition:all 0.5s ease;
      font-size: 50pt;
+     font-weight: 500;
 }
 
 .beschreibung_icon{
      width:100%;
      height:50px;
-     padding-left:60px;
+     padding-left:40px;
      text-align: left;
 }
 
 .vorhersage_temperatur{
      width:100%;
      height:50px;
-     padding-left: 60px;
+     padding-left: 40px;
      text-align: left;
      font-size: 50pt;
 }
 
 .icon_holder{
+     margin-left: 7%;
+     margin-top: 10px;
      width:100%;
      height:120px;
 	transition:all 0.5s ease;
@@ -998,7 +1001,7 @@ body	{
      width:100%;
      height:150px;
      padding-top: 10px;
-     padding-left: 60px;
+     padding-left: 40px;
      text-align: left;
      font-size: 9pt;
      transition:all 0.5s ease;
