@@ -139,6 +139,17 @@ $(".profilpic").click( function(){
        $(".gesundheit").toggleClass("gesundheit_cont_active");
   });
   
+  $(".regen").click( function(){
+     $(".regen").toggleClass("inactive_vis");
+     $(".gewitter").removeClass("inactive_vis");
+     $(".pollen").removeClass("inactive_vis");
+     $(".wolken").removeClass("inactive_vis");
+     
+     $(".regen_active").toggleClass("active_vis");
+     $(".gewitter_active").removeClass("active_vis");
+     $(".pollen_active").removeClass("active_vis");
+     $(".wolken_active").removeClass("active_vis");
+});
 
 $(window).load( function(){
 

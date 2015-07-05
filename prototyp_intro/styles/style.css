@@ -232,6 +232,7 @@ body	{
      top:102px;
      left:130px;
      width: 100%;
+     z-index: 99;
 }
 
 .bar_back{
@@ -1035,6 +1036,7 @@ body	{
 .container_baric{
 	position: absolute;
 	left:calc(50% - 593px);
+	z-index: 99;
 }
 
 .regen {
@@ -1048,6 +1050,13 @@ body	{
 }
 
 .regen_active {
+     left: 0;
+     top: 0;
+     height: 27px;
+     width: 27px;
+     background-size: 100% 100%; 
+     position: absolute;
+     opacity: 0;
      background: url("../imgs/icon_regen_active.svg");
 }
 
@@ -1062,6 +1071,13 @@ body	{
 }
 
 .unwetter_active {
+     left: 0;
+     top: 0;
+     height: 27px;
+     width: 27px;
+     background-size: 100% 100%; 
+     position: absolute;
+     opacity: 0;
      background: url("../imgs/icon_unwetter_active.svg");
 }
 
@@ -1076,6 +1092,13 @@ body	{
 }
 
 .pollen_active {
+     left: 0;
+     top: 0;
+     height: 27px;
+     width: 27px;
+     background-size: 100% 100%; 
+     position: absolute;
+     opacity: 0;
      background: url("../imgs/icon_pollen_active.svg");
 }
 
@@ -1090,6 +1113,13 @@ body	{
 }
 
 .wolken_active {
+     left: 0;
+     top: 0;
+     height: 27px;
+     width: 27px;
+     background-size: 100% 100%; 
+     position: absolute;
+     opacity: 0;
      background: url("../imgs/icon_wolken_active.svg");
 }
 
